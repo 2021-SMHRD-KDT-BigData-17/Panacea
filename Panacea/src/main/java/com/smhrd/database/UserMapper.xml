@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- namespace : sql태그 id를 그룹화하기 위한 속성 mapper의 경로를 작성 -->
+<mapper namespace="com.smhrd.database.UserMapper">
+	
+	<!-- 회원가입 -->
+	<insert id="" parameterType="">
+		INSERT INTO TB_USER (#{user_id}, #{user_pw}, #{user_email}, #{user_nick}, #{user_joinDate}, #{user_type})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="" parameterType="">
+		SELECT * FROM TB_USER WHERE user_id=#{user_id} and user_pw=#{user_pw}
+	</select>
+	
+	<!-- 회원정보수정 -->
+	<update id="" parameterType="">
+		UPDATE TB_USER SET user_id=#{user_id}, user_pw=#{user_pw}, user_email=#{user_email}, user_nick=#{user_nick} 
+	</update>
+</mapper>
