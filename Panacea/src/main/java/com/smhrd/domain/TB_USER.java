@@ -19,6 +19,20 @@ public class TB_USER {
 		this.user_type = user_type;
 	}
 
+	public TB_USER(String user_id, String user_pw) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+	}
+
+	public TB_USER(String user_id, String user_pw, String user_email, String user_nick) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_email = user_email;
+		this.user_nick = user_nick;
+	}
+
 	public String getUser_id() {
 		return user_id;
 	}

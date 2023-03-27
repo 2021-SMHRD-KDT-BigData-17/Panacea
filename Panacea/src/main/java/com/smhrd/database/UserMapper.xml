@@ -7,17 +7,22 @@
 <mapper namespace="com.smhrd.database.UserMapper">
 	
 	<!-- 회원가입 -->
-	<insert id="" parameterType="">
+	<insert id="insertUser" parameterType="com.smhrd.domain.TB_USER">
 		INSERT INTO TB_USER (#{user_id}, #{user_pw}, #{user_email}, #{user_nick}, #{user_joinDate}, #{user_type})
 	</insert>
 	
 	<!-- 로그인 -->
-	<select id="" parameterType="">
+	<select id="selectUser" parameterType="com.smhrd.domain.TB_USER">
 		SELECT * FROM TB_USER WHERE user_id=#{user_id} and user_pw=#{user_pw}
 	</select>
 	
 	<!-- 회원정보수정 -->
-	<update id="" parameterType="">
+	<update id="updateUser" parameterType="com.smhrd.domain.TB_USER">
 		UPDATE TB_USER SET user_id=#{user_id}, user_pw=#{user_pw}, user_email=#{user_email}, user_nick=#{user_nick} 
 	</update>
+	
+	<!-- 로그아웃 -->
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM TB_USER WHERE id=#{user_id}
+	</delete>
 </mapper>
