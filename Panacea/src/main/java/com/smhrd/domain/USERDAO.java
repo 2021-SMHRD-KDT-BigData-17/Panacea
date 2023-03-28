@@ -18,7 +18,7 @@ public class USERDAO {
 			cnt = sqlSession.insert("insertUser", joinUser);
 			
 			if (cnt > 0) {
-				System.out.println("DAO에서는 회원가입 성공!");
+				System.out.println("DAO 회원가입 성공!");
 				sqlSession.commit();
 			} else {
 				sqlSession.rollback();
@@ -59,7 +59,7 @@ public class USERDAO {
 				System.out.println("회원삭제성공");
 				sqlSession.commit();
 			} else {
-				System.out.println("회원삭제싶래");
+				System.out.println("회원삭제실패");
 				sqlSession.rollback();
 			}
 		} catch(Exception e) {

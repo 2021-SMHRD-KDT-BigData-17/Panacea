@@ -12,7 +12,7 @@
 	</insert>
 	
 	<!-- 로그인 -->
-	<select id="selectUser" parameterType="com.smhrd.domain.TB_USER">
+	<select id="selectUser" parameterType="com.smhrd.domain.TB_USER" resultType="com.smhrd.domain.TB_USER">
 		SELECT * FROM TB_USER WHERE user_id=#{user_id} and user_pw=#{user_pw}
 	</select>
 	

@@ -34,6 +34,36 @@
   	<description></description>
   	<servlet-class>com.smhrd.Controller.LogoutCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>InsertBoardCon</servlet-name>
+  	<display-name>InsertBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.InsertBoardCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InsertAllBoardCon</servlet-name>
+  	<display-name>InsertAllBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.InsertAllBoardCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteBoardCon</servlet-name>
+  	<display-name>DeleteBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.DeleteBoardCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateBoardCon</servlet-name>
+  	<display-name>UpdateBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.UpdateBoardCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SelectOneBoardCon</servlet-name>
+  	<display-name>SelectOneBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.SelectOneBoardCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -53,5 +83,25 @@
   <servlet-mapping>
   	<servlet-name>LogoutCon</servlet-name>
   	<url-pattern>/LogoutCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertBoardCon</servlet-name>
+  	<url-pattern>/InsertBoardCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertAllBoardCon</servlet-name>
+  	<url-pattern>/InsertAllBoardCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteBoardCon</servlet-name>
+  	<url-pattern>/DeleteBoardCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateBoardCon</servlet-name>
+  	<url-pattern>/UpdateBoardCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectOneBoardCon</servlet-name>
+  	<url-pattern>/SelectOneBoardCon</url-pattern>
   </servlet-mapping>
 </web-app>

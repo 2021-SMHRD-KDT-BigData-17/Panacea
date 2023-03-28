@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.database.BoardMapper">
+  
+  	<insert id="insertBoard" parameterType="com.smhrd.domain.TB_BOARD">
+  		INSERT INTO TB_BOARD VALUES (b_seq.NEXTVAL, #{b_title), #{b_content), #{b_file), #{b_views), #{b_likes), SYSDATE
+  	</insert>
+  	
+  	<select id="selectAllBoard" parameterType="com.smhrd.domain.TB_BOARD" resultType="com.smhrd.domain.TB_BOARD">
+  		SELECT * FROM TB_BOARD ORDER BY b_seq DESC
+  	</select>
+  	
+  	<select id="selectBoardById" parameterType="com.smhrd.domain.TB_BOARD" resultType="com.smhrd.domain.TB_BOARD">
+  		SELECT * FROM TB_BOARD WHERE id=#{user_id}
+  	</select>
+  	
+  	<update id="updateBoard" parameterType="com.smhrd.domain.TB_BOARD">
+  		UPDATE TB_BOARD SET b_title=#{b_title}, b_content=#{b_content}, b_file=#{b_file}, b_views=#{b_views}, b_likes=#{b_likes} WHERE id=#{user_id}
+  	</update>
+  	
+  	<delete id="deleteBoard" parameterType="String">
+  		DELETE FROM TB_BOARD WHERE id=#{user_id}
+  	</delete>
+  </mapper>
