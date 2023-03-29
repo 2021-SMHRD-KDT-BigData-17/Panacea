@@ -24,8 +24,8 @@ public class JoinCon extends HttpServlet {
 		String pw = request.getParameter("user_pw");
 		String email = request.getParameter("user_email");
 		String nick = request.getParameter("user_nick");
-		// 가입날짜와 회원유형(일반, 전문의, 관리자)은 어떻게 데이터를 표현해야할까?
 		Timestamp joinDate = new Timestamp(System.currentTimeMillis());
+		// 회원유형(일반 G, 전문의 S, 관리자 A)
 		String type = request.getParameter("user_type");
 		
 		TB_USER joinUser = new TB_USER(id, pw, email, nick, joinDate, type);
@@ -35,13 +35,13 @@ public class JoinCon extends HttpServlet {
 		int cnt = dao.insertUser(joinUser);
 		
 		if (cnt > 0) {
-			System.out.println("회원가입 성공!");
-			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
+			System.out.println("Join Success!");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
 			request.setAttribute("joinId", id);
 			rd.forward(request, response);
 		} else {
-			System.out.println("회원가입 실패!");
-			response.sendRedirect("main.jsp");
+			System.out.println("Join Failed!");
+			response.sendRedirect("index.html");
 		}
 	}
 

@@ -32,10 +32,10 @@ public class InsertBoardCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("게시글 작성 성공!");
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("list.html");
 		} else {
 			System.out.println("게시글 작성 실패!");
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("write.html");
 		}
 	}
 

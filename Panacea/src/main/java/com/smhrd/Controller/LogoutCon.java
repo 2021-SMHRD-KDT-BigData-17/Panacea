@@ -21,7 +21,11 @@ public class LogoutCon extends HttpServlet {
 			session.invalidate();
 		}
 		
-		response.sendRedirect(request.getContextPath() + "/login.jsp");
+		// session.removeAttribute("loginMember");
+		// response.sendRedirect("index.html");
+		
+		System.out.println("Logout Success!");
+		response.sendRedirect(request.getContextPath() + "/index.html");
 	}
 
 }

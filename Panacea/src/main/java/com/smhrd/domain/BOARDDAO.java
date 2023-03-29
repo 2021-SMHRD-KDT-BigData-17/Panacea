@@ -35,12 +35,12 @@ public class BOARDDAO {
 	}
 	
 	// 전체 게시글 조회
-	public List<TB_BOARD> selectAllBoard() {
+	public List<TB_BOARD> selectAllBoard(TB_BOARD selectAll) {
 		
 		List<TB_BOARD> boardList = null;
 		
 		try {
-			boardList = sqlSession.selectList("selectAllBoard");
+			boardList = sqlSession.selectList("selectAllBoard", selectAll);
 		   } catch(Exception e) {
 			   e.printStackTrace();
 		   } finally {

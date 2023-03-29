@@ -33,12 +33,12 @@ public class UpdateCon extends HttpServlet {
 		int cnt = dao.updateUser(update);
 		
 		if (cnt > 0) {
-			System.out.println("회원정보수정 완료");
+			System.out.println("Update Success");
 			session.setAttribute("loginUser", update);
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("index.html");
 		} else {
-			System.out.println("회원정보수정 실패");
-			response.sendRedirect("update.jsp");
+			System.out.println("Update Success");
+			response.sendRedirect("index.html");
 		}
 	}
 

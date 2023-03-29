@@ -27,13 +27,13 @@ public class LoginCon extends HttpServlet {
 		TB_USER loginUser = dao.selectUser(login);
 		
 		if (loginUser != null) {
-			System.out.println("로그인 성공!");
+			System.out.println("Login Success");
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", loginUser);
 		} else {
-			System.out.println("로그인 실패!");
+			System.out.println("Login Failed");
 		}
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("index.html");
 	}
 
 }

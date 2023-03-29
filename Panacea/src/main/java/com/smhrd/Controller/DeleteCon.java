@@ -20,7 +20,7 @@ public class DeleteCon extends HttpServlet {
 		
 		int cnt = dao.deleteUser(id);
 		
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("index.html");
 	}
 
 }
