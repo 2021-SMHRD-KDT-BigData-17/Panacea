@@ -56,7 +56,12 @@ public class TB_COMMENT {
 	public void setCmt_dislikes(String cmt_dislikes) {
 		this.cmt_dislikes = cmt_dislikes;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "TB_COMMENT [cmt_seq=" + cmt_seq + ", cmt_content=" + cmt_content + ", cmt_date=" + cmt_date
+				+ ", cmt_likes=" + cmt_likes + ", cmt_dislikes=" + cmt_dislikes + "]";
+	}
 	
 	
 }
