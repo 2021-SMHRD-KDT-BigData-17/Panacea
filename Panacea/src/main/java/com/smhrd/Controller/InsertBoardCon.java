@@ -31,10 +31,10 @@ public class InsertBoardCon extends HttpServlet {
 		int cnt = dao.insertBoard(insert);
 		
 		if (cnt > 0) {
-			System.out.println("게시글 작성 성공!");
+			System.out.println("Success write board");
 			response.sendRedirect("list.html");
 		} else {
-			System.out.println("게시글 작성 실패!");
+			System.out.println("Failed write board!");
 			response.sendRedirect("write.html");
 		}
 	}
