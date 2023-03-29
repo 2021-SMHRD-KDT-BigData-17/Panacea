@@ -1,6 +1,7 @@
 package com.smhrd.Controller;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class JoinCon extends HttpServlet {
 		String email = request.getParameter("user_email");
 		String nick = request.getParameter("user_nick");
 		// 가입날짜와 회원유형(일반, 전문의, 관리자)은 어떻게 데이터를 표현해야할까?
-		String joinDate = request.getParameter("user_joinDate");
+		Timestamp joinDate = new Timestamp(System.currentTimeMillis());
 		String type = request.getParameter("user_type");
 		
 		TB_USER joinUser = new TB_USER(id, pw, email, nick, joinDate, type);

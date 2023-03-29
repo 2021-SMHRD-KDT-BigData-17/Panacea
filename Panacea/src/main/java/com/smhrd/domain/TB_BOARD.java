@@ -1,16 +1,18 @@
 package com.smhrd.domain;
 
+import java.sql.Timestamp;
+
 public class TB_BOARD {
-	private String b_seq;
+	private int b_seq;
 	private String b_title;
 	private String b_content;
 	private String b_file;
-	private String b_views;
-	private String b_likes;
-	private String b_date;
+	private int b_views;
+	private int b_likes;
+	private Timestamp b_date;
 	
-	public TB_BOARD(String b_seq, String b_title, String b_content, String b_file, String b_views, String b_likes,
-			String b_date) {
+	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
+			Timestamp b_date) {
 		super();
 		this.b_seq = b_seq;
 		this.b_title = b_title;
@@ -21,11 +23,11 @@ public class TB_BOARD {
 		this.b_date = b_date;
 	}
 
-	public String getB_seq() {
+	public int getB_seq() {
 		return b_seq;
 	}
 
-	public void setB_seq(String b_seq) {
+	public void setB_seq(int b_seq) {
 		this.b_seq = b_seq;
 	}
 
@@ -53,27 +55,27 @@ public class TB_BOARD {
 		this.b_file = b_file;
 	}
 
-	public String getB_views() {
+	public int getB_views() {
 		return b_views;
 	}
 
-	public void setB_views(String b_views) {
+	public void setB_views(int b_views) {
 		this.b_views = b_views;
 	}
 
-	public String getB_likes() {
+	public int getB_likes() {
 		return b_likes;
 	}
 
-	public void setB_likes(String b_likes) {
+	public void setB_likes(int b_likes) {
 		this.b_likes = b_likes;
 	}
 
-	public String getB_date() {
+	public Timestamp getB_date() {
 		return b_date;
 	}
 
-	public void setB_date(String b_date) {
+	public void setB_date(Timestamp b_date) {
 		this.b_date = b_date;
 	}
 

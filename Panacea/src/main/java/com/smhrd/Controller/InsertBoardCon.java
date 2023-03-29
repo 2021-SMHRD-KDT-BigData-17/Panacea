@@ -1,13 +1,14 @@
 package com.smhrd.Controller;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.domain.BoardDAO;
+import com.smhrd.domain.BOARDDAO;
 import com.smhrd.domain.TB_BOARD;
 
 public class InsertBoardCon extends HttpServlet {
@@ -16,17 +17,17 @@ public class InsertBoardCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		String seq = request.getParameter("b_seq");
+		int seq = Integer.parseInt(request.getParameter("b_seq"));
 		String title = request.getParameter("b_title");
 		String content = request.getParameter("b_content");
 		String file = request.getParameter("b_file");
-		String views = request.getParameter("b_views");
-		String likes = request.getParameter("b_likes");
-		String date = request.getParameter("b_date");
+		int views = Integer.parseInt(request.getParameter("b_views"));
+		int likes = Integer.parseInt(request.getParameter("b_likes"));
+		Timestamp date = new Timestamp(System.currentTimeMillis());
 		
 		TB_BOARD insert = new TB_BOARD(seq, title, content, file, views, likes, date);
 		
-		BoardDAO dao = new BoardDAO();
+		BOARDDAO dao = new BOARDDAO();
 		int cnt = dao.insertBoard(insert);
 		
 		if (cnt > 0) {

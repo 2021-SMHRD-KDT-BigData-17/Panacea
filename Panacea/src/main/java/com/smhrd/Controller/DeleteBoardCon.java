@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.domain.BoardDAO;
+import com.smhrd.domain.BOARDDAO;
 
 public class DeleteBoardCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -16,7 +16,7 @@ public class DeleteBoardCon extends HttpServlet {
 		
 		String seq = request.getParameter("b_seq");
 		
-		BoardDAO dao = new BoardDAO();
+		BOARDDAO dao = new BOARDDAO();
 		dao.deleteBoard(seq);
 		
 		response.sendRedirect("");

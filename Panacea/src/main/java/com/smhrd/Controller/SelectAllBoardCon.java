@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.smhrd.domain.BoardDAO;
+import com.smhrd.domain.BOARDDAO;
 
 public class SelectAllBoardCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;

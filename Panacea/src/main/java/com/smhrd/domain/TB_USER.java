@@ -1,14 +1,16 @@
 package com.smhrd.domain;
 
+import java.sql.Timestamp;
+
 public class TB_USER {
 	private String user_id;
 	private String user_pw;
 	private String user_email;
 	private String user_nick;
-	private String user_joinDate;
+	private Timestamp user_joinDate;
 	private String user_type;
 	
-	public TB_USER(String user_id, String user_pw, String user_email, String user_nick, String user_joinDate,
+	public TB_USER(String user_id, String user_pw, String user_email, String user_nick, Timestamp user_joinDate,
 			String user_type) {
 		super();
 		this.user_id = user_id;
@@ -65,11 +67,11 @@ public class TB_USER {
 		this.user_nick = user_nick;
 	}
 
-	public String getUser_joinDate() {
+	public Timestamp getUser_joinDate() {
 		return user_joinDate;
 	}
 
-	public void setUser_joinDate(String user_joinDate) {
+	public void setUser_joinDate(Timestamp user_joinDate) {
 		this.user_joinDate = user_joinDate;
 	}
 
