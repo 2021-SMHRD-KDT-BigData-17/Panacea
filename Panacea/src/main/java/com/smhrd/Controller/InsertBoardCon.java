@@ -15,17 +15,20 @@ public class InsertBoardCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		System.out.println("InsertBoardCon");
 		request.setCharacterEncoding("UTF-8");
-		
-		int seq = Integer.parseInt(request.getParameter("b_seq"));
 		String title = request.getParameter("b_title");
 		String content = request.getParameter("b_content");
-		String file = request.getParameter("b_file");
-		int views = Integer.parseInt(request.getParameter("b_views"));
-		int likes = Integer.parseInt(request.getParameter("b_likes"));
-		Timestamp date = new Timestamp(System.currentTimeMillis());
+		String category_seq = request.getParameter("category_seq");
 		
-		TB_BOARD insert = new TB_BOARD(seq, title, content, file, views, likes, date);
+		//int views = Integer.parseInt(request.getParameter("b_views"));
+		
+		//int likes = Integer.parseInt(request.getParameter("b_likes"));
+		
+		
+		// Timestamp date = new Timestamp(System.currentTimeMillis());
+		
+		TB_BOARD insert = new TB_BOARD(title, content, category_seq);
 		
 		BOARDDAO dao = new BOARDDAO();
 		int cnt = dao.insertBoard(insert);

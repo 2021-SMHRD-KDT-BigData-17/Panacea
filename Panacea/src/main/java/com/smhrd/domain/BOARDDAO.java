@@ -115,4 +115,9 @@ public class BOARDDAO {
 		
 		return cnt;
 	}
+	
+	// 조회수
+	public void updateView(String param) throws Exception {
+	    sqlSession.update("updateView", param);
+	}
 }

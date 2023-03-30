@@ -30,6 +30,9 @@ public class SelectOneBoardCon extends HttpServlet {
 		BOARDDAO dao = new BOARDDAO();
 		int cnt = dao.selectBoardById(selectOne);
 		
+		
+		
+		
 		if (cnt > 0) {
 			System.out.println("Success select board");
 			response.sendRedirect("view.html");

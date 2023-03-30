@@ -47,7 +47,7 @@
     <!-- // NavBar -->
 
     <div id="content-wrapper">
-        <form action="#">
+        <form action="InsertBoardCon" method="post">
             <div class="board-wrap">
                 <div class="board-title">
                     <h1>글쓰기</h1>
@@ -56,24 +56,24 @@
                 <div class="board-view-wrap">
                     <div class="board-head">
                         <div class="filter">
-                            <select id="category" required>
+                            <select id="category" name="category_seq" required>
                                 <option value="" disabled selected>말머리 선택</option>
-                                <option value="head">머리</option>
-                                <option value="neck">목</option>
-                                <option value="chest">가슴</option>
-                                <option value="abdomen">복부</option>
-                                <option value="leg">다리</option>
-                                <option value="others">기타</option>
+                                <option name="category_seq" value="head">머리</option>
+                                <option name="category_seq" value="neck">목</option>
+                                <option name="category_seq" value="chest">가슴</option>
+                                <option name="category_seq" value="abdomen">복부</option>
+                                <option name="category_seq" value="leg">다리</option>
+                                <option name="category_seq" value="others">기타</option>
                             </select>
                         </div>
                         
                         <div class="title">
-                            <input type="text" placeholder="제목을 입력하세요." required>
+                            <input type="text" name="b_title" placeholder="제목을 입력하세요." required>
                         </div>
                     </div>
                 
                     <div class="board-content">
-                        <textarea name="content" cols="90" rows="10" required></textarea>
+                        <textarea name="b_content" cols="90" rows="10" required></textarea>
                     </div>
     
                     <div class="board-btn">
