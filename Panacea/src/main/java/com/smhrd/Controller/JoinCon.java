@@ -26,7 +26,7 @@ public class JoinCon extends HttpServlet {
 		String nick = request.getParameter("user_nick");
 		Timestamp joinDate = new Timestamp(System.currentTimeMillis());
 		// 회원유형(일반 G, 전문의 S, 관리자 A)
-		String type = request.getParameter("user_type");
+		String type = request.getParameter("user_type").toUpperCase();
 		
 		TB_USER joinUser = new TB_USER(id, pw, email, nick, joinDate, type);
 		System.out.println(joinUser.toString());
@@ -36,7 +36,7 @@ public class JoinCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("Join Success!");
-			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			RequestDispatcher rd = request.getRequestDispatcher("signIn.html");
 			request.setAttribute("joinId", id);
 			rd.forward(request, response);
 		} else {
