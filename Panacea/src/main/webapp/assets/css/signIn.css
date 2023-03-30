@@ -1,0 +1,218 @@
+:root{
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-base3: #e0f780;
+    --color-base4: #b6cbce;
+    --color-base5: #deff58;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color-base2);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Navbar */
+.navbar{
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover{
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active{
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px){
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8));
+    }
+
+    .navbar-brand img{
+        border: 8px solid var(--color-brand);
+    }
+
+    /* Content Wrapper */
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+}
+
+
+/* Btn */
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover, .btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all .4s;
+}
+
+.link-custom:hover::after{
+    width: 100%;
+}
+
+
+/* Sign In */
+
+.wrapper{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: var(--color-base);
+    border-radius: 20px;
+    padding: 80px;
+}
+
+.shadow-effect{
+    transition: all .5s;
+}
+
+.shadow-effect:hover{
+    box-shadow: 0 3px 0 3px var(--color-brand);
+}
+
+.form-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.sign-in{
+    transform: scale(0) translate(-300px, 500px);
+}
+
+.wrapper .form-wrapper.sign-up{
+    position: absolute;
+    top: 0;
+    transform: scale(0) translate(200px, -500px);
+}
+
+.wrapper.active .form-wrapper.sign-up{
+    transform: scale(1) translate(0, 0);
+}
+
+h2{
+    font-size: 30px;
+    color: var(--color-base3);
+    text-align: center;
+}
+
+.input-group{
+    position: relative; /* label의 밑 */
+    margin: 30px 0;
+    border-bottom: 2px solid var(--color-base5);
+}
+
+.input-group label{
+    position: absolute; /* input의 위 */
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--color-base3);
+    pointer-events: none; /* 무슨 기능인지 모르겠음 */
+    transition: .5s;
+}
+
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: var(--color-base3);
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none; /* 입력시 border 생성되는 것을 없앰 */
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: var(--color-base5);
+    font-size: 16px;
+    color: var(--color-base2);
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.signUp-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link p{
+    color: var(--color-base4);
+}
+
+.signUp-link p a{
+    color: var(--color-base3);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signUp-link p a:hover{
+    text-decoration: underline;
+}
