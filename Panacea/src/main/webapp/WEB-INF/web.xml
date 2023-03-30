@@ -88,12 +88,7 @@
   	<description></description>
   	<servlet-class>com.smhrd.Controller.SelectAllCommentCon</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>InsertBoardCon2</servlet-name>
-  	<display-name>InsertBoardCon2</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.Controller.InsertBoardCon2</servlet-class>
-  </servlet>
+
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -150,8 +145,5 @@
   	<servlet-name>SelectAllCommentCon</servlet-name>
   	<url-pattern>/SelectAllCommentCon</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>InsertBoardCon2</servlet-name>
-  	<url-pattern>/InsertBoardCon2</url-pattern>
-  </servlet-mapping>
+
 </web-app>

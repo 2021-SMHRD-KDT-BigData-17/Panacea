@@ -17,6 +17,7 @@ public class BOARDDAO {
 		int cnt = 0;
 		
 		try {
+			System.out.println("dao는 실행!!");
 			cnt = sqlSession.insert("insertBoard", insert);
 			
 			if (cnt > 0) {

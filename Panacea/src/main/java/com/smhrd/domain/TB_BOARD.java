@@ -10,11 +10,10 @@ public class TB_BOARD {
 	private int b_views;
 	private int b_likes;
 	private Timestamp b_date;
-	
 	private String user_id;
-	private String category_seq;
+	private int category_seq;
 	
-	public TB_BOARD(String b_title, String b_content, String category_seq) {
+	public TB_BOARD(String b_title, String b_content, int category_seq) {
 		super();
 		this.b_title = b_title;
 		this.b_content = b_content;
@@ -22,7 +21,7 @@ public class TB_BOARD {
 	}
 
 	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
-			Timestamp b_date, String user_id, String category_seq) {
+			Timestamp b_date, String user_id, int category_seq) {
 		super();
 		this.b_seq = b_seq;
 		this.b_title = b_title;
@@ -34,28 +33,7 @@ public class TB_BOARD {
 		this.user_id = user_id;
 		this.category_seq = category_seq;
 	}
-
-	public TB_BOARD(String b_title, String b_content, String b_file, int b_views, int b_likes, Timestamp b_date) {
-		super();
-		this.b_title = b_title;
-		this.b_content = b_content;
-		this.b_file = b_file;
-		this.b_views = b_views;
-		this.b_likes = b_likes;
-		this.b_date = b_date;
-	}
-
-	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
-			Timestamp b_date) {
-		super();
-		this.b_seq = b_seq;
-		this.b_title = b_title;
-		this.b_content = b_content;
-		this.b_file = b_file;
-		this.b_views = b_views;
-		this.b_likes = b_likes;
-		this.b_date = b_date;
-	}
+	
 
 	public int getB_seq() {
 		return b_seq;
@@ -112,7 +90,7 @@ public class TB_BOARD {
 	public void setB_date(Timestamp b_date) {
 		this.b_date = b_date;
 	}
-
+	
 	public String getUser_id() {
 		return user_id;
 	}
@@ -121,12 +99,19 @@ public class TB_BOARD {
 		this.user_id = user_id;
 	}
 
-	public String getCategory_seq() {
+	public int getCategory_seq() {
 		return category_seq;
 	}
 
-	public void setCategory_seq(String category_seq) {
+	public void setCategory_seq(int category_seq) {
 		this.category_seq = category_seq;
+	}
+
+	@Override
+	public String toString() {
+		return "TB_BOARD [b_seq=" + b_seq + ", b_title=" + b_title + ", b_content=" + b_content + ", b_file=" + b_file
+				+ ", b_views=" + b_views + ", b_likes=" + b_likes + ", b_date=" + b_date + ", user_id=" + user_id
+				+ ", category_seq=" + category_seq + "]";
 	}
 	
 	

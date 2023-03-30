@@ -25,8 +25,9 @@ public class SelectAllBoardCon extends HttpServlet {
 		int views = Integer.parseInt(request.getParameter("b_views"));
 		int likes = Integer.parseInt(request.getParameter("b_likes"));
 		Timestamp date = new Timestamp(System.currentTimeMillis());
+		int category_seq = Integer.parseInt(request.getParameter("category_seq"));
 		
-		TB_BOARD selectAll = new TB_BOARD(seq, title, content, file, views, likes, date);
+		TB_BOARD selectAll = new TB_BOARD(title, content, category_seq);
 		
 		BOARDDAO dao = new BOARDDAO();
 		List<TB_BOARD> cnt = dao.selectAllBoard(selectAll);

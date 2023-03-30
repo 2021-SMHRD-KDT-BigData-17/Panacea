@@ -15,17 +15,16 @@ public class InsertBoardCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		System.out.println("InsertBoardCon");
+		System.out.println("[InsertBoardCon]");
+		
 		request.setCharacterEncoding("UTF-8");
+		
 		String title = request.getParameter("b_title");
 		String content = request.getParameter("b_content");
-		String category_seq = request.getParameter("category_seq");
+		int category_seq = Integer.parseInt(request.getParameter("category_seq"));
 		
-		//int views = Integer.parseInt(request.getParameter("b_views"));
-		
-		//int likes = Integer.parseInt(request.getParameter("b_likes"));
-		
-		
+		// int views = Integer.parseInt(request.getParameter("b_views"));
+		// int likes = Integer.parseInt(request.getParameter("b_likes"));
 		// Timestamp date = new Timestamp(System.currentTimeMillis());
 		
 		TB_BOARD insert = new TB_BOARD(title, content, category_seq);
