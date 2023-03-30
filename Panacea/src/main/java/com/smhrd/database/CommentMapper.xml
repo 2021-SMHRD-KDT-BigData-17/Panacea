@@ -7,7 +7,7 @@
   
   	<!-- 댓글 등록 -->
   	<insert id="insertComment" parameterType="com.smhrd.domain.TB_COMMENT">
-  		INSERT INTO TB_COMMENT VALUES (#{user_id}, #{cmt_comment}, #{cmt_date}, #{cmt_likes}, #{cmt_dislikes})
+  		INSERT INTO TB_COMMENT VALUES (cmt_seq.NEXTVAL, b_seq.NEXTVAL, #{cmt_content}, #{cmt_date}, #{cmt_likes}, #{cmt_dislikes}, #{user_id})
   	</insert>
   	
   	<!-- 댓글 목록 -->
@@ -17,7 +17,7 @@
   	
   	<!-- 댓글 수정 -->
   	<update id="updateComment" parameterType="com.smhrd.domain.TB_COMMENT">
-  		UPDATE TB_COMMENT SET cmt_comment=#{cmt_comment}, cmt_date=#{cmt_date}, cmt_likes=#{cmt_likes}, cmt_dislikes=#{cmt_dislikes}
+  		UPDATE TB_COMMENT SET cmt_content=#{cmt_content}, cmt_date=#{cmt_date}, cmt_likes=#{cmt_likes}, cmt_dislikes=#{cmt_dislikes}
   	</update>
   	
   	<!-- 댓글 삭제 -->

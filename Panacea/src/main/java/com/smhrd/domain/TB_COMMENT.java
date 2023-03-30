@@ -24,9 +24,8 @@ public class TB_COMMENT {
 		this.user_id = user_id;
 	}
 
-	public TB_COMMENT(int cmt_seq, String cmt_content, Timestamp cmt_date, String cmt_likes, String cmt_dislikes) {
+	public TB_COMMENT(String cmt_content, Timestamp cmt_date, String cmt_likes, String cmt_dislikes) {
 		super();
-		this.cmt_seq = cmt_seq;
 		this.cmt_content = cmt_content;
 		this.cmt_date = cmt_date;
 		this.cmt_likes = cmt_likes;

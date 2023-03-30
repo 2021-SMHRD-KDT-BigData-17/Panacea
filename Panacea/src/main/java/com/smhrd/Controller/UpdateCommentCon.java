@@ -17,14 +17,12 @@ public class UpdateCommentCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		int seq = Integer.parseInt(request.getParameter("cmt_seq"));
-		String id = request.getParameter("user_id");
 		String content = request.getParameter("cmt_content");
 		Timestamp date = new Timestamp(System.currentTimeMillis());
 		String likes = request.getParameter("cmt_likes");
 		String dislikes = request.getParameter("cmt_dislikes");
 		
-		TB_COMMENT update = new TB_COMMENT(seq, content, date, likes, dislikes);
+		TB_COMMENT update = new TB_COMMENT(content, date, likes, dislikes);
 		
 		COMMENTDAO dao = new COMMENTDAO();
 		int cnt = dao.updateComment(update);

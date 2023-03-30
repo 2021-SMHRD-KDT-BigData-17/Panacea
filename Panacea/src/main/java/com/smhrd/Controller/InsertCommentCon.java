@@ -17,15 +17,15 @@ public class InsertCommentCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		// 댓글 번호가 필요한가?
-		int seq = Integer.parseInt(request.getParameter("cmt_seq"));
-		String id = request.getParameter("user_id");
+		int cmt_seq = Integer.parseInt(request.getParameter("cmtseq"));
+		int b_seq = Integer.parseInt(request.getParameter("b_seq"));
 		String content = request.getParameter("cmt_content");
 		Timestamp date = new Timestamp(System.currentTimeMillis());
 		String likes = request.getParameter("cmt_likes");
 		String dislikes = request.getParameter("cmt_dislikes");
+		String id = request.getParameter("user_id");
 		
-		TB_COMMENT insert = new TB_COMMENT(seq, content, date, likes, dislikes);
+		TB_COMMENT insert = new TB_COMMENT(cmt_seq, b_seq, content, date, likes, dislikes, id);
 		
 		COMMENTDAO dao = new COMMENTDAO();
 		int cnt = dao.insertComment(insert);

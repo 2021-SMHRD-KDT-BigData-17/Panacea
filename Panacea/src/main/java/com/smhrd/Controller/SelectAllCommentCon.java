@@ -18,15 +18,15 @@ public class SelectAllCommentCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		int seq = Integer.parseInt(request.getParameter("cmt_seq"));
-		// 사용자 id를 가져오려면 DB 테이블에 추가해야할까?
-		String id = request.getParameter("user_id");
+		int cmt_seq = Integer.parseInt(request.getParameter("cmtseq"));
+		int b_seq = Integer.parseInt(request.getParameter("b_seq"));
 		String content = request.getParameter("cmt_content");
 		Timestamp date = new Timestamp(System.currentTimeMillis());
 		String likes = request.getParameter("cmt_likes");
 		String dislikes = request.getParameter("cmt_dislikes");
+		String id = request.getParameter("user_id");
 		
-		TB_COMMENT selectAll = new TB_COMMENT(seq, content, date, likes, dislikes);
+		TB_COMMENT selectAll = new TB_COMMENT(cmt_seq, b_seq, content, date, likes, dislikes, id);
 		
 		COMMENTDAO dao = new COMMENTDAO();
 		List<TB_COMMENT> cnt = dao.selectAllComment(selectAll);

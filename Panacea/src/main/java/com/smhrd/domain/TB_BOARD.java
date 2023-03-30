@@ -27,6 +27,16 @@ public class TB_BOARD {
 		this.category_seq = category_seq;
 	}
 
+	public TB_BOARD(String b_title, String b_content, String b_file, int b_views, int b_likes, Timestamp b_date) {
+		super();
+		this.b_title = b_title;
+		this.b_content = b_content;
+		this.b_file = b_file;
+		this.b_views = b_views;
+		this.b_likes = b_likes;
+		this.b_date = b_date;
+	}
+
 	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
 			Timestamp b_date) {
 		super();
@@ -38,8 +48,6 @@ public class TB_BOARD {
 		this.b_likes = b_likes;
 		this.b_date = b_date;
 	}
-
-
 
 	public int getB_seq() {
 		return b_seq;
