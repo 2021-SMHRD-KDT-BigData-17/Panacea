@@ -10,7 +10,23 @@ public class TB_BOARD {
 	private int b_views;
 	private int b_likes;
 	private Timestamp b_date;
+	private String user_id;
+	private int category_seq;
 	
+	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
+			Timestamp b_date, String user_id, int category_seq) {
+		super();
+		this.b_seq = b_seq;
+		this.b_title = b_title;
+		this.b_content = b_content;
+		this.b_file = b_file;
+		this.b_views = b_views;
+		this.b_likes = b_likes;
+		this.b_date = b_date;
+		this.user_id = user_id;
+		this.category_seq = category_seq;
+	}
+
 	public TB_BOARD(int b_seq, String b_title, String b_content, String b_file, int b_views, int b_likes,
 			Timestamp b_date) {
 		super();
@@ -22,6 +38,8 @@ public class TB_BOARD {
 		this.b_likes = b_likes;
 		this.b_date = b_date;
 	}
+
+
 
 	public int getB_seq() {
 		return b_seq;
@@ -79,10 +97,20 @@ public class TB_BOARD {
 		this.b_date = b_date;
 	}
 
-	@Override
-	public String toString() {
-		return "TB_BOARD [b_seq=" + b_seq + ", b_title=" + b_title + ", b_content=" + b_content + ", b_file=" + b_file
-				+ ", b_views=" + b_views + ", b_likes=" + b_likes + ", b_date=" + b_date + "]";
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+	public int getCategory_seq() {
+		return category_seq;
+	}
+
+	public void setCategory_seq(int category_seq) {
+		this.category_seq = category_seq;
 	}
 	
 	

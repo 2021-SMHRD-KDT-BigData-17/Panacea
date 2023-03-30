@@ -2,20 +2,20 @@ package com.smhrd.domain;
 
 public class TB_CATEGORY {
 	
-	private String category_seq;
+	private int category_seq;
 	private String category_nm;
 	
-	public TB_CATEGORY(String category_seq, String category_nm) {
+	public TB_CATEGORY(int category_seq, String category_nm) {
 		super();
 		this.category_seq = category_seq;
 		this.category_nm = category_nm;
 	}
 
-	public String getCategory_seq() {
+	public int getCategory_seq() {
 		return category_seq;
 	}
 
-	public void setCategory_seq(String category_seq) {
+	public void setCategory_seq(int category_seq) {
 		this.category_seq = category_seq;
 	}
 
