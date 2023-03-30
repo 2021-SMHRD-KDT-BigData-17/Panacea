@@ -31,10 +31,10 @@ public class UpdateBoardCon extends HttpServlet {
 		int cnt = dao.updateBoard(update);
 		
 		if (cnt > 0) {
-			System.out.println("게시글 수정 성공!");
+			System.out.println("Success update board");
 			response.sendRedirect("list.html");
 		} else {
-			System.out.println("게시글 수정 실패!");
+			System.out.println("Failed update board");
 			response.sendRedirect("list.html");
 		}
 	}

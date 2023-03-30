@@ -32,10 +32,10 @@ public class SelectAllBoardCon extends HttpServlet {
 		List<TB_BOARD> cnt = dao.selectAllBoard(selectAll);
 		
 		if (cnt != null) {
-			System.out.println("게시글 목록 불러오기 성공!");
+			System.out.println("Success select all board list");
 			response.sendRedirect("list.html");
 		} else {
-			System.out.println("게시글 목록 불러오기 실패!");
+			System.out.println("Failed select all board list");
 			response.sendRedirect("list.html");
 		} 
 	}

@@ -28,13 +28,13 @@ public class SelectOneBoardCon extends HttpServlet {
 		TB_BOARD selectOne = new TB_BOARD(seq, title, content, file, views, likes, date);
 		
 		BOARDDAO dao = new BOARDDAO();
-		int cnt = dao.selectOneBoard(selectOne);
+		int cnt = dao.selectBoardById(selectOne);
 		
 		if (cnt > 0) {
-			System.out.println("게시글 불러오기 성공!");
+			System.out.println("Success select board");
 			response.sendRedirect("view.html");
 		} else {
-			System.out.println("게시글 불러오기 실패!");
+			System.out.println("Success select board");
 			response.sendRedirect("view.html");
 		}
 	}

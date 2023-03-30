@@ -5,23 +5,28 @@
   
   <mapper namespace="com.smhrd.database.BoardMapper">
   
+  	<!-- 게시글 등록 -->
   	<insert id="insertBoard" parameterType="com.smhrd.domain.TB_BOARD">
-  		INSERT INTO TB_BOARD VALUES (#{b_seq.NEXTVAL}, #{b_titl}, #{b_content}, #{b_file}, #{b_views}, #{b_likes}, #{SYSDATE})
+  		INSERT INTO TB_BOARD VALUES (#{b_seq.NEXTVAL}, #{b_title}, #{b_content}, #{b_file}, #{b_views}, #{b_likes}, #{b_date})
   	</insert>
   	
+  	<!-- 게시글 전체 목록 -->
   	<select id="selectAllBoard" parameterType="com.smhrd.domain.TB_BOARD" resultType="com.smhrd.domain.TB_BOARD">
   		SELECT * FROM TB_BOARD ORDER BY b_seq DESC
   	</select>
   	
+  	<!-- 게시글 한개 보기 -->
   	<select id="selectBoardById" parameterType="com.smhrd.domain.TB_BOARD" resultType="com.smhrd.domain.TB_BOARD">
-  		SELECT * FROM TB_BOARD WHERE id=#{user_id}
+  		SELECT * FROM TB_BOARD WHERE user_id=#{user_id}
   	</select>
   	
+  	<!-- 게시글 수정 -->
   	<update id="updateBoard" parameterType="com.smhrd.domain.TB_BOARD">
-  		UPDATE TB_BOARD SET b_title=#{b_title}, b_content=#{b_content}, b_file=#{b_file}, b_views=#{b_views}, b_likes=#{b_likes} b_date=#{SYSDATE} WHERE id=#{user_id}
+  		UPDATE TB_BOARD SET b_title=#{b_title}, b_content=#{b_content}, b_file=#{b_file}, b_views=#{b_views}, b_likes=#{b_likes} b_date=#{b_date} WHERE user_id=#{user_id}
   	</update>
   	
+  	<!-- 게시글 삭제 -->
   	<delete id="deleteBoard" parameterType="String">
-  		DELETE FROM TB_BOARD WHERE id=#{user_id}
+  		DELETE FROM TB_BOARD WHERE user_id=#{user_id}
   	</delete>
   </mapper>

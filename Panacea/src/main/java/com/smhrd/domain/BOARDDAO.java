@@ -17,10 +17,10 @@ public class BOARDDAO {
 		int cnt = 0;
 		
 		try {
-			cnt = sqlSession.insert("insrtBoard", insert);
+			cnt = sqlSession.insert("insertBoard", insert);
 			
 			if (cnt > 0) {
-				System.out.println("DAO 게시글 작성 성공!");
+				System.out.println("Success write board in DAO");
 				sqlSession.commit();
 			} else {
 				sqlSession.rollback();
@@ -51,11 +51,11 @@ public class BOARDDAO {
 	}
 	
 	// 한개의 게시글 조회
-	public int selectOneBoard(TB_BOARD selectOne) {
+	public int selectBoardById(TB_BOARD selectOne) {
 		int cnt = 0;
 		
 		try {
-			cnt = sqlSession.selectOne("selectOneBoard", selectOne);
+			cnt = sqlSession.selectOne("selectBoardById", selectOne);
 			
 			if (cnt > 0) {
 				sqlSession.commit();
@@ -101,10 +101,10 @@ public class BOARDDAO {
 			cnt = sqlSession.delete("deleteBoard", id);
 			
 			if (cnt > 0) {
-				System.out.println("게시글 삭제 성공");
+				System.out.println("Success delete board");
 				sqlSession.commit();
 			} else {
-				System.out.println("게시글 삭제 실패");
+				System.out.println("Failed delete board");
 				sqlSession.rollback();
 			}
 		} catch(Exception e) {
