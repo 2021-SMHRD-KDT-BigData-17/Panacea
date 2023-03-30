@@ -1,5 +1,7 @@
 package com.smhrd.domain;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -30,6 +32,22 @@ public class COMMENTDAO {
 		}
 		
 		return cnt;
+	}
+	
+	// 댓글 목록
+	public List<TB_COMMENT> selectAllComment(TB_COMMENT selectAll) {
+		
+		List<TB_COMMENT> commentList = null;
+		
+		try {
+			commentList = sqlSession.selectList("selectAllComment", selectAll);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return commentList;
 	}
 	
 	// 댓글 수정

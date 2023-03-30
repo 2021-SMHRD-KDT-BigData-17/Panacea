@@ -1,14 +1,16 @@
 package com.smhrd.domain;
 
+import java.sql.Timestamp;
+
 public class TB_COMMENT {
 	
 	private int cmt_seq;
 	private String cmt_content;
-	private String cmt_date;
+	private Timestamp cmt_date;
 	private String cmt_likes;
 	private String cmt_dislikes;
 	
-	public TB_COMMENT(int cmt_seq, String cmt_content, String cmt_date, String cmt_likes, String cmt_dislikes) {
+	public TB_COMMENT(int cmt_seq, String cmt_content, Timestamp cmt_date, String cmt_likes, String cmt_dislikes) {
 		super();
 		this.cmt_seq = cmt_seq;
 		this.cmt_content = cmt_content;
@@ -33,11 +35,11 @@ public class TB_COMMENT {
 		this.cmt_content = cmt_content;
 	}
 
-	public String getCmt_date() {
+	public Timestamp getCmt_date() {
 		return cmt_date;
 	}
 
-	public void setCmt_date(String cmt_date) {
+	public void setCmt_date(Timestamp cmt_date) {
 		this.cmt_date = cmt_date;
 	}
 

@@ -10,6 +10,11 @@
   		INSERT INTO TB_COMMENT VALUES (#{user_id}, #{cmt_comment}, #{cmt_date}, #{cmt_likes}, #{cmt_dislikes})
   	</insert>
   	
+  	<!-- 댓글 목록 -->
+  	<select id="selectAllComment" parameterType="com.smhrd.domain.TB_COMMENT"> 
+  		SELECT * FROM TB_COMMENT ORDER BY cmt_seq DESC
+  	</select>
+  	
   	<!-- 댓글 수정 -->
   	<update id="updateComment" parameterType="com.smhrd.domain.TB_COMMENT">
   		UPDATE TB_COMMENT SET cmt_comment=#{cmt_comment}, cmt_date=#{cmt_date}, cmt_likes=#{cmt_likes}, cmt_dislikes=#{cmt_dislikes}
