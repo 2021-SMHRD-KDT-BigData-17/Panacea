@@ -33,7 +33,7 @@ public class LoginCon extends HttpServlet {
 		} else {
 			System.out.println("Login Failed");
 		}
-		response.sendRedirect("index.html");
+		response.sendRedirect("list.html");
 	}
 
 }
