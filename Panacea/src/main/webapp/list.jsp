@@ -62,14 +62,14 @@
                 <div class="filter">
                     <div>
                         <label for="category">말머리</label>
-                        <select id="category">
+                        <select id="category" name="category_seq">
                             <option value="">전체</option>
-                            <option value="head" name="head">머리</option>
-                            <option value="neck" name="neck">목</option>
-                            <option value="chest" name="chest">가슴</option>
-                            <option value="abdomen" name="abdomen">복부</option>
-                            <option value="leg" name="leg">다리</option>
-                            <option value="others" name="others">기타</option>
+                            <option value="1">머리</option>
+                            <option value="2">목</option>
+                            <option value="3" >가슴</option>
+                            <option value="4">복부</option>
+                            <option value="5">다리</option>
+                            <option value="6">기타</option>
                         </select>
                     </div>
     
