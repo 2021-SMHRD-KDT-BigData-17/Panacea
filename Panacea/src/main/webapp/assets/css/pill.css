@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.pill-wrap{
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: 10%;
+}
+
+.search{
+    margin-bottom: 30px;
+}
+
+/* table, tr{
+    border: 1px solid #fff;
+} */
+
+table{
+    width: 1000px;
+    height: 750px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+.image{
+    border-right: 1px solid #fff;
+}
+
+tr:nth-child(2), tr:nth-child(4), tr:nth-child(6), tr:nth-child(8){
+    border-bottom: 1px solid #fff;
+}
+
+tr:nth-child(1)>td, tr:nth-child(3)>td, tr:nth-child(5)>td, tr:nth-child(7)>td, tr:nth-child(9)>td{
+    height: 50px;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+
+.page a{
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.image img{
+    width: 140px;
+    height: 140px;
+}
+
+.bookmark{
+    width: 150px;
+}

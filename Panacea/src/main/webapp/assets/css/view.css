@@ -1,14 +1,3 @@
-:root{
-    --color-body: #b6cbce;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #e0f780;
-    --color-brand2: #deff58;
-    --sidbar-width: 240px;
-    --font-base: "Bai Jamjuree";
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +11,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 90px;
     margin-left: 10%;
     width: 1000px;
     border: 1px solid #fff;

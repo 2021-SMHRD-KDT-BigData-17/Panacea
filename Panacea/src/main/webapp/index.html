@@ -24,7 +24,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="#home">페이지 소개</a>
                     </li>
@@ -38,9 +37,16 @@
                         <a class="nav-link" href="#service3">기능 소개 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">문의하기</a>
+                        <a class="nav-link" href="signIn.html">로그인</a>
+                        <!-- 로그인 X 상태 : 유저 닉네임, 로그아웃 버튼 안 보이게 -->
                     </li>
                 </ul>
+            </div>
+            <div class="user-wrap">
+                <a href="myPage.html">유저 닉네임</a>
+                <span>|</span>
+                <button>로그아웃</button>
+                <!-- 로그인 O 상태 : 로그인 버튼 안 보이게 -->
             </div>
         </div>
     </nav>
@@ -62,7 +68,7 @@
                         <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="200">1. 상비약 커뮤니티 &nbsp;&nbsp;&nbsp; 2. 처방약 정보 검색 &nbsp;&nbsp;&nbsp; 3. 내정보</p>
                         <div data-aos="fade-up" data-aos-delay="400">
                             <a href="list.html" class="btn btn-brand me-3">서비스 페이지 이동</a>
-                            <a href="#contact" class="link-custom">문의하기로 이동</a>
+                            <a href="signIn.html" class="link-custom">회원가입/로그인 이동</a>
                         </div>
                     </div>
                 </div>
@@ -231,11 +237,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
         <!-- // Service3 (기능소개3) -->
 
         <!-- Contact (문의하기) -->
-        <section id="contact" class="full-height px-lg-5">
+        <!-- <section id="contact" class="full-height px-lg-5">
             <div class="container">
 
                 <div class="row justify-content-center text-center">
@@ -263,11 +271,10 @@
                             </div>
                         </form>
                     </div>
-
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- // Contact (문의하기) -->
 
         <!-- Footer -->
