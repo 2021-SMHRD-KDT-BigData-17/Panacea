@@ -9,5 +9,3 @@ signUpBtnLink.addEventListener('click', () => {
 signInBtnLink.addEventListener('click', () => {
     wrapper.classList.toggle('active');
 });
-
-// 로그인 유효성 검사
