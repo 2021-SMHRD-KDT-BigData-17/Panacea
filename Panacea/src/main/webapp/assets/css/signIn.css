@@ -216,3 +216,8 @@ button{
 .signUp-link p a:hover{
     text-decoration: underline;
 }
+
+.hide {
+	display: none;
+	color: red;
+}
