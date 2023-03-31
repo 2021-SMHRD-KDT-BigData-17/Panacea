@@ -7,7 +7,7 @@
   
   	<!-- 게시글 등록 -->
   	<insert id="insertBoard" parameterType="com.smhrd.domain.TB_BOARD">
-  		INSERT INTO TB_BOARD (b_title, b_content, category_seq) VALUES (#{b_title}, #{b_content}, #{category_seq})
+  		INSERT INTO TB_BOARD (b_seq, b_title, b_content, category_seq) VALUES (TB_BOARD_SEQ.NEXTVAL, #{b_title}, #{b_content}, #{category_seq})
   	</insert>
   	
   	<!-- 게시글 전체 목록 -->
