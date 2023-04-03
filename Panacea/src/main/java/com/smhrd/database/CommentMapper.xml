@@ -7,7 +7,7 @@
   
   	<!-- 댓글 등록 -->
   	<insert id="insertComment" parameterType="com.smhrd.domain.TB_COMMENT">
-  		INSERT INTO TB_COMMENT VALUES (cmt_seq.NEXTVAL, b_seq.NEXTVAL, #{cmt_content}, #{cmt_date}, #{cmt_likes}, #{cmt_dislikes}, #{user_id})
+  		INSERT INTO TB_COMMENT (cmt_seq, b_seq, cmt_content, user_id) VALUES (TB_COMMENT_SEQ.NEXTVAL, TB_BOARD_SEQ.NEXTVAL, #{cmt_content}, #{user_id})
   	</insert>
   	
   	<!-- 댓글 목록 -->

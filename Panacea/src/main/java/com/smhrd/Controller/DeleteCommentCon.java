@@ -20,7 +20,7 @@ public class DeleteCommentCon extends HttpServlet {
 		COMMENTDAO dao = new COMMENTDAO();
 		dao.deleteComment(id);
 		
-		response.sendRedirect("view.html");
+		response.sendRedirect("view.jsp");
 	}
 
 }

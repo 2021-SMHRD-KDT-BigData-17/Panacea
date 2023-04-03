@@ -22,5 +22,6 @@
   <mappers>
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/BoardMapper.xml"/>
+    <mapper resource="com/smhrd/database/CommentMapper.xml"/>
   </mappers>
 </configuration>

@@ -8,12 +8,12 @@ public class TB_COMMENT {
 	private int b_seq;
 	private String cmt_content;
 	private Timestamp cmt_date;
-	private String cmt_likes;
-	private String cmt_dislikes;
+	private int cmt_likes;
+	private int cmt_dislikes;
 	private String user_id;
 	
-	public TB_COMMENT(int cmt_seq, int b_seq, String cmt_content, Timestamp cmt_date, String cmt_likes,
-			String cmt_dislikes, String user_id) {
+	public TB_COMMENT(int cmt_seq, int b_seq, String cmt_content, Timestamp cmt_date, int cmt_likes,
+			int cmt_dislikes, String user_id) {
 		super();
 		this.cmt_seq = cmt_seq;
 		this.b_seq = b_seq;
@@ -24,12 +24,20 @@ public class TB_COMMENT {
 		this.user_id = user_id;
 	}
 
-	public TB_COMMENT(String cmt_content, Timestamp cmt_date, String cmt_likes, String cmt_dislikes) {
+	public TB_COMMENT(String cmt_content, Timestamp cmt_date, int cmt_likes, int cmt_dislikes) {
 		super();
 		this.cmt_content = cmt_content;
 		this.cmt_date = cmt_date;
 		this.cmt_likes = cmt_likes;
 		this.cmt_dislikes = cmt_dislikes;
+	}
+
+	public TB_COMMENT(int cmt_seq, int b_seq, String cmt_content, String user_id) {
+		super();
+		this.cmt_seq = cmt_seq;
+		this.b_seq = b_seq;
+		this.cmt_content = cmt_content;
+		this.user_id = user_id;
 	}
 
 	public int getCmt_seq() {
@@ -64,19 +72,19 @@ public class TB_COMMENT {
 		this.cmt_date = cmt_date;
 	}
 
-	public String getCmt_likes() {
+	public int getCmt_likes() {
 		return cmt_likes;
 	}
 
-	public void setCmt_likes(String cmt_likes) {
+	public void setCmt_likes(int cmt_likes) {
 		this.cmt_likes = cmt_likes;
 	}
 
-	public String getCmt_dislikes() {
+	public int getCmt_dislikes() {
 		return cmt_dislikes;
 	}
 
-	public void setCmt_dislikes(String cmt_dislikes) {
+	public void setCmt_dislikes(int cmt_dislikes) {
 		this.cmt_dislikes = cmt_dislikes;
 	}
 

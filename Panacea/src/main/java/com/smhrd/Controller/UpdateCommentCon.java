@@ -19,8 +19,8 @@ public class UpdateCommentCon extends HttpServlet {
 		
 		String content = request.getParameter("cmt_content");
 		Timestamp date = new Timestamp(System.currentTimeMillis());
-		String likes = request.getParameter("cmt_likes");
-		String dislikes = request.getParameter("cmt_dislikes");
+		int likes = Integer.parseInt(request.getParameter("cmt_likes") != null ? request.getParameter("cmt_likes") : "0");
+		int dislikes = Integer.parseInt(request.getParameter("cmt_dislikes") != null ? request.getParameter("cmt_dislikes") : "0");
 		
 		TB_COMMENT update = new TB_COMMENT(content, date, likes, dislikes);
 		
@@ -29,7 +29,7 @@ public class UpdateCommentCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("Success update comment");
-			response.sendRedirect("view.html");
+			response.sendRedirect("view.jsp");
 		} else {
 			System.out.println("Failed update comment");
 			response.sendRedirect("write.html");
