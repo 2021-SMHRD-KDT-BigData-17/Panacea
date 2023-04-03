@@ -1,0 +1,129 @@
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.pillInfo-wrap{
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: 10%;
+}
+
+.pillInfo-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.search>input, .search>button, .list-wrap>button{
+    border: none;
+}
+
+#searchInput, #searchButton, .list-wrap>button{
+    height: 30px;
+    border-radius: 0.325rem;
+}
+
+#searchInput{
+    width: 250px;
+    padding: 5px 8px;
+    background-color: #eee;
+}
+
+#searchButton{
+    margin-left: 5px;
+    padding: 0 8px;
+}
+
+#searchButton, .list{
+    background-color: var(--color-brand);
+}
+
+#searchButton, .list>a{
+    font-weight: 600;
+}
+
+.list>a{
+    color: var(--color-base2);
+}
+
+#searchButton:hover, .list:hover{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+}
+
+.list-wrap>.list{
+    padding: 0 8px;
+}
+
+/* table, td{
+    border: 1px solid #fff;
+} */
+
+table{
+    width: 1000px;
+    margin-bottom: 10%;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+tr:nth-child(1), tr:nth-child(2){
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(3){
+    border-bottom: 2px solid #fff;
+}
+
+.image{
+    border-left: 2px solid #fff;
+}
+
+.title-left{
+    width: 180px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    border-right: 1px solid #eee;
+}
+
+.title-right{
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+.image{
+    width: 160px;
+    height: 160px;
+    text-align: center;
+}
+
+.image img{
+    width: 150px;
+    height: 150px;
+}
+
+.content-head{
+    padding: 2% 3% 1% 2%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-body{
+    padding: 0 3% 3% 2%;
+}
+
+tr:nth-child(5){
+    border-bottom: 1px solid #fff;
+}

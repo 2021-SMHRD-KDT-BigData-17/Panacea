@@ -5,7 +5,6 @@
     --color-base2: #022a30;
     --color-brand: #e0f780;
     --color-brand2: #deff58;
-    --sidbar-width: 240px;
 }
 
 *{
@@ -37,6 +36,15 @@ h1, .filter, .board-list-wrap{
     background: #eee;
 }
 
+.filter>div>label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filter>div>label,#category{
+    height: 30px;
+}
+
 .search{
     height: 30px;
     display: flex;
@@ -54,13 +62,17 @@ h1, .filter, .board-list-wrap{
 
 #searchButton{
     height: 30px;
-    margin-left: 5px;
+    margin-left: 10px;
     font-weight: 600;
     padding: 0 8px;
     background-color: var(--color-brand);
     border-color: var(--color-brand);
     color: var(--color-base);
     border: none;
+}
+
+#searchButton:hover{
+    background-color: var(--color-brand2);
 }
 
 table{
@@ -120,23 +132,17 @@ th, td {
 
 .board-bottom{
     margin-top: 5%;
-    align-items: center;
 }
 
 .page{
-    display: inline-block;
+    position: absolute;
+    left: 40%;
 }
 
 .page a{
-    /* display: table-cell; */
-    text-align: center;
     width: 30px;
     height: 30px;
-    margin: 10px;
-}
-
-.page .num{
-    margin: 15px;
+    padding: 15px;
 }
 
 #searchInput, #searchButton, .on{
@@ -147,11 +153,21 @@ th, td {
     outline: none;
 }
 
+.write-btn{
+    position: absolute;
+    right: 10.5%;
+}
+
 .on{
     font-weight: 700;
     padding: 8px 12px;
     background-color: var(--color-brand);
     border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.on:hover{
+    background-color: var(--color-brand2);
     color: var(--color-base);
 }
 

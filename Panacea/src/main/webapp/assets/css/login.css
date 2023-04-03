@@ -1,0 +1,19 @@
+:root{
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-base3: #e0f780;
+    --color-base4: #b6cbce;
+    --color-base5: #deff58;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
