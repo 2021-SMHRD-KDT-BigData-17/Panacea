@@ -35,12 +35,12 @@ public class COMMENTDAO {
 	}
 	
 	// 댓글 목록
-	public List<TB_COMMENT> selectAllComment(TB_COMMENT selectAll) {
+	public List<TB_COMMENT> selectAllComment() {
 		
 		List<TB_COMMENT> commentList = null;
 		
 		try {
-			commentList = sqlSession.selectList("selectAllComment", selectAll);
+			commentList = sqlSession.selectList("selectAllComment");
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {

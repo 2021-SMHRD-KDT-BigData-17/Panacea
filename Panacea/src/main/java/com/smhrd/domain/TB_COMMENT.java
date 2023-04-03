@@ -12,34 +12,15 @@ public class TB_COMMENT {
 	private int cmt_dislikes;
 	private String user_id;
 	
-	public TB_COMMENT(int cmt_seq, int b_seq, String cmt_content, Timestamp cmt_date, int cmt_likes,
-			int cmt_dislikes, String user_id) {
+	public TB_COMMENT() {}
+
+	public TB_COMMENT(int cmt_seq, String cmt_content, String user_id) {
 		super();
 		this.cmt_seq = cmt_seq;
-		this.b_seq = b_seq;
-		this.cmt_content = cmt_content;
-		this.cmt_date = cmt_date;
-		this.cmt_likes = cmt_likes;
-		this.cmt_dislikes = cmt_dislikes;
-		this.user_id = user_id;
-	}
-
-	public TB_COMMENT(String cmt_content, Timestamp cmt_date, int cmt_likes, int cmt_dislikes) {
-		super();
-		this.cmt_content = cmt_content;
-		this.cmt_date = cmt_date;
-		this.cmt_likes = cmt_likes;
-		this.cmt_dislikes = cmt_dislikes;
-	}
-
-	public TB_COMMENT(int cmt_seq, int b_seq, String cmt_content, String user_id) {
-		super();
-		this.cmt_seq = cmt_seq;
-		this.b_seq = b_seq;
 		this.cmt_content = cmt_content;
 		this.user_id = user_id;
 	}
-
+	
 	public int getCmt_seq() {
 		return cmt_seq;
 	}

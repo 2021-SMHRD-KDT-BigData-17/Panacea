@@ -7,11 +7,11 @@
   
   	<!-- 댓글 등록 -->
   	<insert id="insertComment" parameterType="com.smhrd.domain.TB_COMMENT">
-  		INSERT INTO TB_COMMENT (cmt_seq, b_seq, cmt_content, user_id) VALUES (TB_COMMENT_SEQ.NEXTVAL, TB_BOARD_SEQ.NEXTVAL, #{cmt_content}, #{user_id})
+  		INSERT INTO TB_COMMENT (cmt_seq, cmt_content, user_id) VALUES (TB_COMMENT_SEQ.NEXTVAL, #{cmt_content, jdbcType=VARCHAR}, #{user_id, jdbcType=VARCHAR})
   	</insert>
   	
   	<!-- 댓글 목록 -->
-  	<select id="selectAllComment" parameterType="com.smhrd.domain.TB_COMMENT"> 
+  	<select id="selectAllComment" parameterType="com.smhrd.domain.TB_COMMENT" resultType="com.smhrd.domain.TB_COMMENT"> 
   		SELECT * FROM TB_COMMENT ORDER BY cmt_seq DESC
   	</select>
   	

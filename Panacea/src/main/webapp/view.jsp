@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.domain.COMMENTDAO" %>
+<%@page import="com.smhrd.domain.TB_COMMENT" %>
+<%@page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +56,7 @@
     <!-- // NavBar -->
 
     <div id="content-wrapper">
-        <form action="#">
+        <form action="InsertCommentCon" method="post">
             <div class="board-view-wrap">
                 <div class="board-head">
                     <div class="board-head-left">
@@ -106,9 +109,22 @@
                         <textarea name="" class="comentInput" placeholder="댓글을 작성하세요."></textarea>
                         <input type="submit" class="comentButton" value="등록">
                     </div>
-                    <p class="writer">댓글 작성자</p>
-                    <p class="coment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, atque.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellat, omnis doloremque unde veniam illum voluptatum, expedita aspernatur non earum assumenda iure perferendis tenetur consequuntur perspiciatis magnam. Laboriosam temporibus, possimus accusamus obcaecati dolorum nisi quae non doloribus, animi sunt dolores saepe! Laudantium mollitia vel corrupti accusamus, a cumque illo quo.
+                    <%-- <p class="writer"><%= session.getAttribute("joinId") %></p> --%>
+                    <p class="coment">
+						<%
+						COMMENTDAO dao = new COMMENTDAO();
+						List<TB_COMMENT> commentList = dao.selectAllComment();
+						
+						if (commentList != null) {
+						    for (TB_COMMENT comment : commentList) {
+						%>
+						        <p><%= comment.getCmt_seq() %></p>
+						        <p><%= comment.getCmt_content() %></p>
+						        <p><%= comment.getUser_id() %></p>
+						<%
+						    }
+						}
+						%>
                     </p>
                 </div>
             </div>
