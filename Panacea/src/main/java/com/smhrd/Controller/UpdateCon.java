@@ -35,10 +35,10 @@ public class UpdateCon extends HttpServlet {
 		if (cnt > 0) {
 			System.out.println("Update Success");
 			session.setAttribute("loginUser", update);
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		} else {
 			System.out.println("Update Success");
-			response.sendRedirect("index.html");
+			response.sendRedirect("index.jsp");
 		}
 	}
 

@@ -25,7 +25,7 @@ public class LogoutCon extends HttpServlet {
 		// response.sendRedirect("index.html");
 		
 		System.out.println("Logout Success!");
-		response.sendRedirect(request.getContextPath() + "/index.html");
+		response.sendRedirect(request.getContextPath() + "/index.jsp");
 	}
 
 }

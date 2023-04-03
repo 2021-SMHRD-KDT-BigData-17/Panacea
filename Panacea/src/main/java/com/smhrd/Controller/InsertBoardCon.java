@@ -34,10 +34,10 @@ public class InsertBoardCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("Success write board");
-			response.sendRedirect("list.html");
+			response.sendRedirect("list.jsp");
 		} else {
 			System.out.println("Failed write board!");
-			response.sendRedirect("write.html");
+			response.sendRedirect("write.jsp");
 		}
 	}
 

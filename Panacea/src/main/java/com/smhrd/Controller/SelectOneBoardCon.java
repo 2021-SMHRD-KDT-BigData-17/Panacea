@@ -36,10 +36,10 @@ public class SelectOneBoardCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("Success select board");
-			response.sendRedirect("view.html");
+			response.sendRedirect("view.jsp");
 		} else {
 			System.out.println("Success select board");
-			response.sendRedirect("view.html");
+			response.sendRedirect("view.jsp");
 		}
 	}
 

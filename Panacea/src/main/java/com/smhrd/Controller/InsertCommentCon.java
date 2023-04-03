@@ -37,7 +37,7 @@ public class InsertCommentCon extends HttpServlet {
 			response.sendRedirect("view.jsp");
 		} else {
 			System.out.println("Failed write board!");
-			response.sendRedirect("write.html");
+			response.sendRedirect("write.jsp");
 		}
 	}
 

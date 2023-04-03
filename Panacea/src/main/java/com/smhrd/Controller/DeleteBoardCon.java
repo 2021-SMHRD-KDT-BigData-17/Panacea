@@ -19,7 +19,7 @@ public class DeleteBoardCon extends HttpServlet {
 		BOARDDAO dao = new BOARDDAO();
 		dao.deleteBoard(seq);
 		
-		response.sendRedirect("view.html");
+		response.sendRedirect("view.jsp");
 	}
 
 }

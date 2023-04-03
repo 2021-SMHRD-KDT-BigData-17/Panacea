@@ -33,10 +33,10 @@ public class UpdateBoardCon extends HttpServlet {
 		
 		if (cnt > 0) {
 			System.out.println("Success update board");
-			response.sendRedirect("list.html");
+			response.sendRedirect("list.jsp");
 		} else {
 			System.out.println("Failed update board");
-			response.sendRedirect("list.html");
+			response.sendRedirect("list.jsp");
 		}
 	}
 

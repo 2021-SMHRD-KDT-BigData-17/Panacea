@@ -32,7 +32,7 @@ public class UpdateCommentCon extends HttpServlet {
 			response.sendRedirect("view.jsp");
 		} else {
 			System.out.println("Failed update comment");
-			response.sendRedirect("write.html");
+			response.sendRedirect("write.jsp");
 		}
 	}
 

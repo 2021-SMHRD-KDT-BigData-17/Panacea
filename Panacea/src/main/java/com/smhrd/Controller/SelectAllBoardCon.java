@@ -34,10 +34,10 @@ public class SelectAllBoardCon extends HttpServlet {
 		
 		if (cnt != null) {
 			System.out.println("Success select all board list");
-			response.sendRedirect("list.html");
+			response.sendRedirect("list.jsp");
 		} else {
 			System.out.println("Failed select all board list");
-			response.sendRedirect("list.html");
+			response.sendRedirect("list.jsp");
 		} 
 	}
 

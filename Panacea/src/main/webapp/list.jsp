@@ -1,21 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>동의보감</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동의보감</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="assets/css/1.css">
     <link rel="stylesheet" href="assets/css/list.css">
-    
 </head>
-<body>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -32,19 +30,23 @@
                 <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="list.html" style="color: #e0f780">상비약</a>
+                        <a class="nav-link" href="list.jsp" style="color: #e0f780">상비약</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pill.html">처방약</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">내정보</a>
-                        <!-- 
-                            로그인x 상태일 때는 signIn.html로 연결
-                            로그인o 상태일 때는 myPage.html로 연결
-                        -->
+                        <a class="nav-link" href="myPage.jsp">내정보</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.jsp">문의하기</a>
                     </li>
                 </ul>
+            </div>
+            <div class="user-wrap">
+				<a href="myPage.jsp"><%=session.getAttribute("joinId")%></a>
+                <span>|</span>
+                <a href="LogoutCon">로그아웃</a>
             </div>
         </div>
     </nav>
@@ -62,14 +64,14 @@
                 <div class="filter">
                     <div>
                         <label for="category">말머리</label>
-                        <select id="category" name="category_seq">
+                        <select id="category">
                             <option value="">전체</option>
-                            <option value="1">머리</option>
-                            <option value="2">목</option>
-                            <option value="3" >가슴</option>
-                            <option value="4">복부</option>
-                            <option value="5">다리</option>
-                            <option value="6">기타</option>
+                            <option value="head" name="head">머리</option>
+                            <option value="neck" name="neck">목</option>
+                            <option value="chest" name="chest">가슴</option>
+                            <option value="abdomen" name="abdomen">복부</option>
+                            <option value="leg" name="leg">다리</option>
+                            <option value="others" name="others">기타</option>
                         </select>
                     </div>
     
@@ -95,7 +97,7 @@
                             <tr>
                                 <td class="num">1</td>
                                 <td class="category">머리</td>
-                                <td class="title"><a href="view.html">제목 1</a></td>
+                                <td class="title"><a href="view.jsp">제목 1</a></td>
                                 <td class="writer">닉네임 1</td>
                                 <td class="date">2023.03.XX</td>
                                 <td class="cnt">0</td>
@@ -103,7 +105,7 @@
                             <tr>
                                 <td class="num">2</td>
                                 <td class="category">다리</td>
-                                <td class="title"><a href="view.html">제목 2</a></td>
+                                <td class="title"><a href="view.jsp">제목 2</a></td>
                                 <td class="writer">닉네임 2</td>
                                 <td class="date">2023.03.XX</td>
                                 <td class="cnt">2</td>
@@ -111,7 +113,7 @@
                             <tr>
                                 <td class="num">3</td>
                                 <td class="category">기타</td>
-                                <td class="title"><a href="view.html">제목 3</a></td>
+                                <td class="title"><a href="view.jsp">제목 3</a></td>
                                 <td class="writer">닉네임 3</td>
                                 <td class="date">2023.03.XX</td>
                                 <td class="cnt">1</td>
@@ -133,7 +135,9 @@
                             <a href="#" class="last"><i class="las la-angle-double-right"></i></a>
                         </div>
                         
-                        <a href="write.html" class="on">글쓰기</a>
+                        <div class="write-btn">
+                            <a href="write.jsp" class="on">글쓰기</a>
+                        </div>
                     </div>
                 </div>
             </div>    
