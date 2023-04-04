@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/2.css">
+    <link rel="stylesheet" href="assets/css/1.css">
     <link rel="stylesheet" href="assets/css/myPage.css">
 </head>
 <body>

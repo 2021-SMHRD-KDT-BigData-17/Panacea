@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>동의보감</title>
 
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/aos.css">
-    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head> 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- NavBar -->
