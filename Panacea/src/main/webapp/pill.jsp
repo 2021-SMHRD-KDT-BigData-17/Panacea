@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.domain.MEDICINEDAO" %>
+<%@page import="com.smhrd.domain.TB_MEDICINE" %>
+<%@page import="java.util.List" %>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/pill.css">
 </head>
 <body>
+	
      <!-- NavBar -->
      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
@@ -60,7 +64,7 @@
                     <button id="searchButton">검색</button>
                 </div>
 
-                <div class="pill-table">
+<!--                 <div class="pill-table">
                     <table>
                         <tr>
                             <td rowspan="2" class="image"><img src="assets/images/루퐁1.jpg"></td>
@@ -128,7 +132,35 @@
                             <td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용 약 내용 약 내용 약 내용 약 내용</p></td>
                         </tr>
                     </table>
-                </div>
+                </div> -->
+                
+            <div class="pill-table">
+			    <table>
+			        <% 
+					MEDICINEDAO dao = new MEDICINEDAO();
+					List<TB_MEDICINE> medicineList = dao.selectAllMedicine();
+			        if (medicineList != null) {
+			            for (TB_MEDICINE medicine : medicineList) {
+			        %>
+			            <tr>
+			                <td rowspan="2" class="image"><img src="<%=medicine.getPill_img() %>"></td>
+			                <td><a class="pillName" href="pillInfo.jsp"><%=medicine.getPill_name() %></a></td>
+			                <td rowspan="2">
+			                    <div class="bookmark-wrap">
+			                        <button class="bookmark">즐겨찾기</button>
+			                        <i class="las la-star"></i>
+			                    </div>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td><p class="pillContent"><%=medicine.getPill_effect() %></p></td>
+			            </tr>
+			        <% 
+			            }
+			        }
+			        %>
+			    </table>
+			</div>
 
                 <div class="page">
                     <a href="#" class="first"><i class="las la-angle-double-left"></i></a>

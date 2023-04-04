@@ -23,5 +23,7 @@
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/BoardMapper.xml"/>
     <mapper resource="com/smhrd/database/CommentMapper.xml"/>
+    <mapper resource="com/smhrd/database/MedicineMapper.xml"/>
+    <mapper resource="com/smhrd/database/WishListMapper.xml"/>
   </mappers>
 </configuration>

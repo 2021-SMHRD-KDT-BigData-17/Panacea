@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.domain.MEDICINEDAO" %>
+<%@page import="com.smhrd.domain.TB_MEDICINE" %>
+<%@page import="java.util.List" %>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +56,7 @@
     </nav>
     <!-- // NavBar -->
 
-    <div id="content-wrapper">
+<!--     <div id="content-wrapper">
         <form action="#">
             <div class="pillInfo-wrap">
                 <div class="pillInfo-head">
@@ -105,6 +108,69 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
+    
+    <div id="content-wrapper">
+    <form action="#">
+        <div class="pillInfo-wrap">
+            <div class="pillInfo-head">
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="제품명/약 문자">
+                    <button id="searchButton">검색</button>
+                </div>
+                <div class="list-wrap">
+                    <button class="list"><a href="pill.jsp">목록</a></button>
+                </div>
+            </div>
+            <div class="pillInfo-table">
+                <% 
+        			MEDICINEDAO dao = new MEDICINEDAO();
+        			List<TB_MEDICINE> medicineList = dao.selectAllMedicine();
+        			
+                	if (medicineList != null) {
+                    	for (TB_MEDICINE medicine : medicineList) { 
+                    %>
+                        <table>
+                            <tr>
+                                <td class="title-left"><span>제품명</span></td>
+                                <td class="title-right"><span><%= medicine.getPill_name() %></span></td>
+                                <td rowspan="3" class="image"><img src="<%= medicine.getPill_img() %>"></td>
+                            </tr>
+                            <tr>
+                                <td class="title-left"><span>제형</span></td>
+                                <td class="title-right"><span><%= medicine.getPill_shape() %></span></td>
+                            </tr>
+                            <tr>
+                                <td class="title-left"><span>효능ㆍ효과</span></td>
+                                <td class="title-right"><span><%= medicine.getPill_effect() %></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="content-head"><span>▶ 용법ㆍ용량</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="content-body"><span><%= medicine.getPill_dosage() %></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="content-head"><span>▶ 사용 상의 주의사항</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="content-body">
+                                    <ol>
+                                        <li>주의사항
+                                            <ol>
+                                                <li><%= medicine.getPill_side_effect() %></li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </table>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>

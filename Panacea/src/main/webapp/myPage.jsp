@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.domain.WISHLISTDAO" %>
+<%@page import="com.smhrd.domain.TB_WISHLIST" %>
+<%@page import="java.util.List" %>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -87,11 +90,11 @@
         </form>
 
         <!-- 즐겨찾기 모음 폼 -->
-        <form action="#">
+        <form action="SelectAllWishCon" method="post">
             <div class="bookmark-wrap">
                 <div class="bookmark-head">
                     <h5>즐겨찾기 목록</h5>
-                    <a href="more.html">더보기▶</a>
+                    <a href="more.jsp">더보기▶</a>
                 </div>
                 <div class="bookmark-body">
                     <!-- 사진을 클릭하면 해당 약의 상세정보 페이지로 넘어가기 -->
@@ -100,6 +103,18 @@
                     <a href="pillInfo.jsp"><img src="assets/images/강아지4.jpg"></a>
                     <a href="pillInfo.jsp"><img src="assets/images/강아지3.jpg"></a>
                     <a href="pillInfo.jsp"><img src="assets/images/강아지2.jpg"></a>
+                    
+<%--                     <% 
+					  WISHLISTDAO dao = new WISHLISTDAO(); 
+					  List<TB_WISHLIST> selectAllWish = dao.selectAllWish(request.getParameter("user_id")); 
+					
+					  for(TB_WISHLIST wish : selectAllWish) {
+					    %>
+					    <a href="pillInfo.jsp?pill_seq=<%= wish.getPill_seq() %>"><img src="assets/images/<%= wish.getPill_seq() %>.jpg"></a>
+					    <% 
+					  } 
+					%> --%>
+					                    
                 </div>
             </div>
         </form>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.database.MedicineMapper">
+  
+  	<!-- 약 정보 등록 -->
+  	<insert id="insertMedicine" parameterType="com.smhrd.domain.TB_MEDICINE">
+  		INSERT INTO TB_MEDICINE (pill_seq, pill_name, pill_img, pill_effect, pill_shape, pill_dosage, pill_side_effect) VALUES (TB_MEDICINE_SEQ.NEXTVAL, #{pill_name}, #{pill_img}, #{pill_effect}, #{pill_shape}, #{pill_dosage}, #{pill_side_effect})
+  	</insert>
+  	
+  	<!-- 약 정보 목록 -->
+  	<select id="selectAllMedicine" parameterType="com.smhrd.domain.TB_MEDICINE" resultType="com.smhrd.domain.TB_MEDICINE">
+  		SELECT * FROM TB_MEDICINE ORDER BY pill_seq DESC
+  	</select>
+  	
+  	<!-- 약 정보 한개 보기 -->
+  	<select id="selectMedicineById" parameterType="com.smhrd.domain.TB_MEDICINE" resultType="com.smhrd.domain.TB_MEDICINE">
+  		SELECT * FROM TB_MEDICINE WHERE user_id=#{user_id}
+  	</select>
+  	
+  	<!-- 약 정보 수정 -->
+  	<update id="updateMedicine" parameterType="com.smhrd.domain.TB_MEDICINE">
+  		UPDATE TB_MEDICINE SET pill_name=#{pill_name}, pill_img=#{pill_img}, pill_effect=#{pill_effect}, pill_shape=#{pill_shape}, pill_dosage=#{pill_dosage} pill_side_effect=#{pill_side_effect} WHERE user_id=#{user_id}
+  	</update>
+  	
+  	<!-- 약 정보 삭제 -->
+  	<delete id="deleteMedicine" parameterType="String">
+  		DELETE FROM TB_MEDICINE WHERE user_id=#{user_id}
+  	</delete>
+  </mapper>

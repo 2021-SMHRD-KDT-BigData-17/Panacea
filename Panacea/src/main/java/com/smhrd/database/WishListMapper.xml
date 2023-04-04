@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.database.MedicineMapper">
+  
+  	<!-- 찜 등록 -->
+  	<insert id="insertWish" parameterType="com.smhrd.domain.TB_WISHLIST">
+  		INSERT INTO TB_WISHLIST (pill_seq) VALUES (#{pill_seq})
+  	</insert>
+  	
+  	<!-- 찜 목록 -->
+  	<select id="selectAllWish" parameterType="com.smhrd.domain.TB_WISHLIST" resultType="com.smhrd.domain.TB_WISHLIST">
+  		SELECT * FROM TB_WISHLIST
+  	</select>
+  	
+  	<!-- 찜 삭제 -->
+  	<delete id="deleteWish" parameterType="String">
+  		DELETE FROM TB_WISHLIST WHERE pill_seq=#{pill_seq}
+  	</delete>
+  	
+ </mapper>

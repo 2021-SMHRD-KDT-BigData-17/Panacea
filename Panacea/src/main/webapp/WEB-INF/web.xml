@@ -88,6 +88,48 @@
   	<description></description>
   	<servlet-class>com.smhrd.Controller.SelectAllCommentCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>insertMedicineCon</servlet-name>
+  	<display-name>insertMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.insertMedicineCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteMedicineCon</servlet-name>
+  	<display-name>DeleteMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.DeleteMedicineCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateMedicineCon</servlet-name>
+  	<display-name>UpdateMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.UpdateMedicineCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SelectAllMedicineCon</servlet-name>
+  	<display-name>SelectAllMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.SelectAllMedicineCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InsertWishCon</servlet-name>
+  	<display-name>InsertWishCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.InsertWishCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteWishCon</servlet-name>
+  	<display-name>DeleteWishCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.DeleteWishCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SelectAllWishCon</servlet-name>
+  	<display-name>SelectAllWishCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.SelectAllWishCon</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
@@ -144,6 +186,34 @@
   <servlet-mapping>
   	<servlet-name>SelectAllCommentCon</servlet-name>
   	<url-pattern>/SelectAllCommentCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>insertMedicineCon</servlet-name>
+  	<url-pattern>/insertMedicineCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteMedicineCon</servlet-name>
+  	<url-pattern>/DeleteMedicineCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateMedicineCon</servlet-name>
+  	<url-pattern>/UpdateMedicineCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectAllMedicineCon</servlet-name>
+  	<url-pattern>/SelectAllMedicineCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertWishCon</servlet-name>
+  	<url-pattern>/InsertWishCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteWishCon</servlet-name>
+  	<url-pattern>/DeleteWishCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectAllWishCon</servlet-name>
+  	<url-pattern>/SelectAllWishCon</url-pattern>
   </servlet-mapping>
 
 </web-app>

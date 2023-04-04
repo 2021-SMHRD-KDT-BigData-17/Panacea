@@ -6,14 +6,14 @@ public class TB_WISHLIST {
 	
 	private int wish_seq;
 	private String user_id;
-	private int phill_seq;
+	private int pill_seq;
 	private Timestamp req_date;
 	
-	public TB_WISHLIST(int wish_seq, String user_id, int phill_seq, Timestamp req_date) {
+	public TB_WISHLIST(int wish_seq, String user_id, int pill_seq, Timestamp req_date) {
 		super();
 		this.wish_seq = wish_seq;
 		this.user_id = user_id;
-		this.phill_seq = phill_seq;
+		this.pill_seq = pill_seq;
 		this.req_date = req_date;
 	}
 
@@ -33,12 +33,12 @@ public class TB_WISHLIST {
 		this.user_id = user_id;
 	}
 
-	public int getPhill_seq() {
-		return phill_seq;
+	public int getPill_seq() {
+		return pill_seq;
 	}
 
-	public void setPhill_seq(int phill_seq) {
-		this.phill_seq = phill_seq;
+	public void setPill_seq(int pill_seq) {
+		this.pill_seq = pill_seq;
 	}
 
 	public Timestamp getReq_date() {
