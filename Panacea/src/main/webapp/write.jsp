@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
-            <a class="navbar-brand mx-lg-auto mb-lg-4" href="index.html">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp">
                 <span class="h3 fw-bold d-block d-lg-none">동의보감</span>
                 <img src="./assets/images/pong.jpg" class="d-none d-lg-block rounded-circle" alt="">
             </a>
@@ -32,7 +33,7 @@
                         <a class="nav-link" href="list.jsp" style="color: #e0f780">상비약</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pill.html">처방약</a>
+                        <a class="nav-link" href="pill.jsp">처방약</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="myPage.jsp">내정보</a>
@@ -43,7 +44,7 @@
                 </ul>
             </div>
             <div class="user-wrap">
-				<a href="myPage.jsp"><%=session.getAttribute("joinId")%></a>
+                <a href="myPage.jsp"><%=session.getAttribute("joinId")%></a>
                 <span>|</span>
                 <a href="LogoutCon">로그아웃</a>
             </div>
@@ -78,7 +79,7 @@
                     </div>
                 
                     <div class="board-content">
-                        <textarea name="content" cols="90" rows="10" placeholder="내용을 입력하세요." required></textarea>
+                        <textarea name="b_content" cols="90" rows="10" placeholder="내용을 입력하세요." required></textarea>
                     </div>
     
                     <div class="board-btn">

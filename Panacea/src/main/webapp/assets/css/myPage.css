@@ -1,0 +1,131 @@
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.modify-wrap, .bookmark-wrap{
+    width: 900px;
+    margin-left: 12%;
+    padding: 2%;
+}
+
+.modify-wrap{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    border-radius: 0.325rem;
+}
+
+.modify-title{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+[type=submit]{
+    height: 35px;
+    border-radius: 0.325rem;
+    border: none;
+    padding: 0 10px;
+    background-color: var(--color-brand);
+    font-weight: 600;
+}
+
+[type=submit]:hover{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+}
+
+table{
+    width: 900px;
+    height: 300px;
+    border-radius: 0.325rem;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+tr{
+    border-bottom: 1px solid #ddd;
+}
+
+th{
+    width: 150px;
+    text-align: center;
+    border-right: 2px solid #ddd;
+    font-size: 20px;
+    color: #fff;
+}
+
+tr:nth-child(5)>td:nth-child(3){
+    text-align: end;
+}
+
+.modify-left>input{
+    width: 250px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 0.325rem;
+    border: none;
+    padding-left: 10px;
+}
+
+.id-info, .type-info{
+    color: var(--color-heading);
+}
+
+.pw-info, .email-info, .nickname-info{
+    background-color: #eee;
+    color: var(--color-base);
+}
+
+.pw-info:focus, .email-info:focus, .nickname-info:focus{
+    outline: 3.3px solid rgba(134, 183, 254, 0.6);
+}
+
+.bookmark-head{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bookmark-head a{
+    font-weight: 600;
+    color: var(--color-brand);
+}
+
+.bookmark-body{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15%;
+}
+
+.bookmark-body a{
+    width: 172px;
+    height: 172px;
+    line-height: 164px;
+    border: 2px solid #eee;
+    text-align: center;
+}
+
+.bookmark-body a img{
+    max-width: 160px;
+    max-height: 160px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}

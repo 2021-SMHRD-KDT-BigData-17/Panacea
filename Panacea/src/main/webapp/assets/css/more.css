@@ -1,0 +1,74 @@
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bookmark-wrap{
+    margin-top: 90px;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    width: 1000px;
+    height: 800px;
+}
+
+h2{
+    margin-left: 15px;
+    margin-bottom: 40px;
+}
+
+table, td{
+    border: 20px solid var(--color-base2);
+}
+
+table{
+    width: 1000px;
+    height: 660px;
+}
+
+.image{
+    width: 176px;
+    height: 176px;
+    text-align: center;
+    border-radius: 0.325rem;
+}
+
+.image img{
+    width: 176px;
+    height: 176px;
+    border-radius: 0.325rem;
+}
+
+.image button{
+    border: 1px solid var(--color-brand);
+    border-radius: 0.325rem;
+    height: 30px;
+    width: 176px;
+    margin: 10px 0;
+    padding: 0 10px;
+    color: var(--color-base);
+    background-color: var(--color-brand);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.image button:hover, .image button:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.image button:active{
+    background-color: var(--color-base2);
+    color: var(--color-brand);
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}

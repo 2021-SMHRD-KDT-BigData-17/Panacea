@@ -17,7 +17,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
-            <a class="navbar-brand mx-lg-auto mb-lg-4" href="index.html">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp">
                 <span class="h3 fw-bold d-block d-lg-none">동의보감</span>
                 <img src="./assets/images/pong.jpg" class="d-none d-lg-block rounded-circle">
             </a>
@@ -50,7 +50,7 @@
     <div id="content-wrapper">
         <div class="wrapper shadow-effect">
             <div class="form-wrapper sign-in">
-                <form action="LoginCon">
+                <form action="LoginCon" method="post">
                     <!-- 
                         로그인 성공하면 list.html로 이동
                         로그인 실패하면 signIn.html로 이동
@@ -74,7 +74,7 @@
                 </form>
             </div>
             <div class="form-wrapper sign-up">
-                <form action="JoinCon">
+                <form action="JoinCon" method="post">
                     <h2>회원가입</h2>
                     <div class="input-group">
                         <input type="text" name="user_id" required>

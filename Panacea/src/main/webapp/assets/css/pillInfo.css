@@ -86,10 +86,6 @@ tr:nth-child(3){
     border-bottom: 2px solid #fff;
 }
 
-.image{
-    border-left: 2px solid #fff;
-}
-
 .title-left{
     width: 180px;
     text-align: center;
@@ -107,6 +103,7 @@ tr:nth-child(3){
     width: 160px;
     height: 160px;
     text-align: center;
+    border: 2px solid #fff;
 }
 
 .image img{

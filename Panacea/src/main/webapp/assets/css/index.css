@@ -33,6 +33,21 @@ img{
     height: auto;
 }
 
+#top{
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    background-color: transparent;
+    color: var(--color-brand);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#top:hover{
+    color: #fff;
+}
+
 .text-brand{
     color: var(--color-brand);
 }

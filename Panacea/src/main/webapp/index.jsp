@@ -3,19 +3,18 @@
 <%@ page import="javax.servlet.http.HttpSession" %>
     
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>동의보감</title>
-	
+    <title>동의보감</title>
+
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-</head>
-
+</head> 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -57,10 +56,9 @@
     </nav>
     <!-- // NavBar -->
 
-    <!-- <a href="#home" id="up"><i class="las la-arrow-circle-up"></i></a> -->
-
     <!-- Content Wrapper -->
     <div id="content-wrapper">
+        <a href="#home" id="top"><i class="las la-arrow-circle-up la-3x"></i></a>
 
         <!-- Home (페이지 소개) -->
         <section id="home" class="full-height px-lg-5">
@@ -225,7 +223,7 @@
                                 <img class="rounded-4" src="assets/images/이미지/내정보1.png" alt="">
                             </div>
                             <div class="card-custom-content p-4">
-                                <p class="p-content">제품명 또는 약에 적힌 문자로 검색</p>
+                                <p class="p-content">내정보 수정하기</p>
                                 <!-- <a href="#" class="link-custom">Read More</a> -->
                             </div>
                         </div>
@@ -237,7 +235,7 @@
                                 <img class="rounded-4" src="assets/images/이미지/내정보2.png" alt="">
                             </div>
                             <div class="card-custom-content p-4">
-                                <p class="p-content">원하는 약 즐겨찾기 등록/해제</p>
+                                <p class="p-content">즐겨찾기 한 약 모아보기</p>
                                 <!-- <a href="#" class="link-custom">Read More</a> -->
                             </div>
                         </div>
@@ -304,9 +302,8 @@
     </div>
     <!-- // Content Wrapper -->
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/aos.js"></script>
-    <script src="./assets/js/main.js"></script>
-
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
