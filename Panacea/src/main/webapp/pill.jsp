@@ -25,7 +25,7 @@
 		<div class="container flex-lg-column">
 			<a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp"> <span
 				class="h3 fw-bold d-block d-lg-none">동의보감</span> <img
-				src="./assets/images/pong.jpg"
+				src="./assets/images/logo.jpg"
 				class="d-none d-lg-block rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button"
@@ -61,12 +61,12 @@
 					<input type="text" id="searchInput" placeholder="제품명/약 문자">
 					<button id="searchButton">검색</button>
 				</div>
-				<div class="pill-table">
+<!-- 				<div class="pill-table">
 					<table>
 						<tr>
 							<td rowspan="2" class="image"><img
-								src="assets/images/루퐁1.jpg"></td>
-							<td><a class="pillName" href="pillInfo.jsp">약 이름 1</a></td>
+								src="assets/images/aspirin.jpg"></td>
+							<td><a class="pillName" href="pillInfo.jsp">아스피린(Aspirin)</a></td>
 							<td rowspan="2">
 								<div class="bookmark-wrap">
 									<button class="bookmark">즐겨찾기</button>
@@ -75,13 +75,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용
-									약 내용 약 내용 약 내용 약 내용</p></td>
+							<td><p class="pillContent">아스피린은 해열제, 진통제 및 항염증제로 사용되는
+									일종의 약물입니다. 아스피린은 혈액을 얇게 만들어 혈전 형성을 방지하며, 심장병 및 뇌졸중과 같은 혈전성 질환을
+									예방하는 데에도 사용됩니다.</p></td>
 						</tr>
 						<tr>
 							<td rowspan="2" class="image"><img
-								src="assets/images/루퐁2.jpg"></td>
-							<td><a class="pillName" href="pillInfo.jsp">약 이름 2</a></td>
+								src="assets/images/pill2.jpg"></td>
+							<td><a class="pillName" href="pillInfo.jsp">파마세티콘(Paracetamol)</a></td>
 							<td rowspan="2">
 								<div class="bookmark-wrap">
 									<button class="bookmark">즐겨찾기</button>
@@ -90,13 +91,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용
-									약 내용 약 내용 약 내용 약 내용</p></td>
+							<td><p class="pillContent">파마세티콘은 해열제 및 진통제로 널리 사용되는
+									약물입니다. 그러나 항염증 효과는 없습니다. 파마세티콘은 대부분 가벼운 통증이나 열에 사용되며, 두통, 치통,
+									근육통 등의 일반적인 증상을 완화할 수 있습니다.</p></td>
 						</tr>
 						<tr>
 							<td rowspan="2" class="image"><img
-								src="assets/images/루퐁3.jpg"></td>
-							<td><a class="pillName" href="pillInfo.jsp">약 이름 3</a></td>
+								src="assets/images/pill3.jpg"></td>
+							<td><a class="pillName" href="pillInfo.jsp">라모티진(Lamotrigine)</a></td>
 							<td rowspan="2">
 								<div class="bookmark-wrap">
 									<button class="bookmark">즐겨찾기</button>
@@ -105,13 +107,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용
-									약 내용 약 내용 약 내용 약 내용</p></td>
+							<td><p class="pillContent">라모티진은 간질 및 양극성 장애 (양극성 우울증 및
+									양극성 조울증)의 치료에 사용되는 항경련제 및 정신약물입니다. 라모티진은 신경 세포에서 일어나는 화학 변화를
+									조절함으로써 뇌의 활동을 안정화시켜 증상을 완화할 수 있습니다.</p></td>
 						</tr>
 						<tr>
 							<td rowspan="2" class="image"><img
-								src="assets/images/루퐁4.jpg"></td>
-							<td><a class="pillName" href="pillInfo.jsp">약 이름 4</a></td>
+								src="assets/images/pill4.jpg"></td>
+							<td><a class="pillName" href="pillInfo.jsp">메트포르민(Metformin)</a></td>
 							<td rowspan="2">
 								<div class="bookmark-wrap">
 									<button class="bookmark">즐겨찾기</button>
@@ -120,13 +123,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용
-									약 내용 약 내용 약 내용 약 내용</p></td>
+							<td><p class="pillContent">메트포르민은 당뇨병 환자에게 처방되는 약물로, 혈당
+									수치를 낮추는 데 사용됩니다. 메트포르민은 간에서 포도당 생성을 억제하고, 근육 세포에서 포도당의 흡수를
+									촉진함으로써 혈당 수치를 감소시키는 효과가 있습니다.</p></td>
 						</tr>
 						<tr>
 							<td rowspan="2" class="image"><img
-								src="assets/images/루퐁5.jpg"></td>
-							<td><a class="pillName" href="pillInfo.jsp">약 이름 5</a></td>
+								src="assets/images/pill5.jpg"></td>
+							<td><a class="pillName" href="pillInfo.jsp">프로바이오틱스(Probiotics)</a></td>
 							<td rowspan="2">
 								<div class="bookmark-wrap">
 									<button class="bookmark">즐겨찾기</button>
@@ -135,14 +139,15 @@
 							</td>
 						</tr>
 						<tr>
-							<td><p class="pillContent">약 내용 약 내용 약 내용 약 내용 약 내용 약 내용
-									약 내용 약 내용 약 내용 약 내용</p></td>
+							<td><p class="pillContent">프로바이오틱스는 유익한 세균이나 미생물을 포함하는
+									건강 보조식품으로, 소화기 건강을 개선하고 면역 체계를 강화하는 데 도움이 됩니다. 프로바이오틱스는 대부분
+									유산균이나 비슷한 종류의 미생물로 구성되며, 다양한 형태의 제품으로 판매됩니다.</p></td>
 						</tr>
 					</table>
-				</div>
+				</div> -->
 
 				<!-- Jsp 적용 -->
-				<%--             <div class="pill-table">
+				<div class="pill-table">
 			    <table>
 			        <% 
 					MEDICINEDAO dao = new MEDICINEDAO();
@@ -168,7 +173,7 @@
 			        }
 			        %>
 			    </table>
-			</div> --%>
+			</div>
 
 				<div class="page">
 					<a href="#" class="first"><i class="las la-angle-double-left"></i></a>

@@ -22,7 +22,7 @@
 		<div class="container flex-lg-column">
 			<a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp"> <span
 				class="h3 fw-bold d-block d-lg-none">동의보감</span> <img
-				src="./assets/images/pong.jpg"
+				src="./assets/images/logo.jpg"
 				class="d-none d-lg-block rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button"
@@ -62,63 +62,31 @@
 					<tr>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁1.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/aspirin.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁2.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill2.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁3.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill3.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁4.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill4.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁5.jpg"></a>
-								<button>즐겨찾기 해제</button>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="image">
-							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁1.jpg"></a>
-								<button>즐겨찾기 해제</button>
-							</div>
-						</td>
-						<td class="image">
-							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁2.jpg"></a>
-								<button>즐겨찾기 해제</button>
-							</div>
-						</td>
-						<td class="image">
-							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁3.jpg"></a>
-								<button>즐겨찾기 해제</button>
-							</div>
-						</td>
-						<td class="image">
-							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁4.jpg"></a>
-								<button>즐겨찾기 해제</button>
-							</div>
-						</td>
-						<td class="image">
-							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁5.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill5.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
@@ -126,31 +94,63 @@
 					<tr>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁1.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill6.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁2.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill7.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁3.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill8.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁4.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill9.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>
 						<td class="image">
 							<div class="bookmark-list">
-								<a href="pillInfo.jsp"><img src="assets/images/루퐁5.jpg"></a>
+								<a href="pillInfo.jsp"><img src="assets/images/pill10.jpg"></a>
+								<button>즐겨찾기 해제</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="image">
+							<div class="bookmark-list">
+								<a href="pillInfo.jsp"><img src="assets/images/pill11.jpg"></a>
+								<button>즐겨찾기 해제</button>
+							</div>
+						</td>
+						<td class="image">
+							<div class="bookmark-list">
+								<a href="pillInfo.jsp"><img src="assets/images/pill12.jpg"></a>
+								<button>즐겨찾기 해제</button>
+							</div>
+						</td>
+						<td class="image">
+							<div class="bookmark-list">
+								<a href="pillInfo.jsp"><img src="assets/images/pill13.jpg"></a>
+								<button>즐겨찾기 해제</button>
+							</div>
+						</td>
+						<td class="image">
+							<div class="bookmark-list">
+								<a href="pillInfo.jsp"><img src="assets/images/pill14.jpg"></a>
+								<button>즐겨찾기 해제</button>
+							</div>
+						</td>
+						<td class="image">
+							<div class="bookmark-list">
+								<a href="pillInfo.jsp"><img src="assets/images/pill15.jpg"></a>
 								<button>즐겨찾기 해제</button>
 							</div>
 						</td>

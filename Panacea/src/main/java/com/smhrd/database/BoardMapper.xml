@@ -16,7 +16,7 @@
   	
   	<!-- 게시글 한개 보기 -->
   	<select id="selectBoardById" parameterType="com.smhrd.domain.TB_BOARD" resultType="com.smhrd.domain.TB_BOARD">
-  		SELECT * FROM TB_BOARD WHERE user_id=#{user_id}
+  		SELECT * FROM TB_BOARD WHERE pill_seq=#{pill_seq}
   	</select>
   	
   	<!-- 게시글 수정 -->

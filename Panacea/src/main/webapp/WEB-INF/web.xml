@@ -130,6 +130,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.Controller.SelectAllWishCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SelectOneMedicineCon</servlet-name>
+  	<display-name>SelectOneMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.SelectOneMedicineCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SelectByOneMedicineCon</servlet-name>
+  	<display-name>SelectByOneMedicineCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.Controller.SelectOneMedicineCon</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
@@ -214,6 +226,14 @@
   <servlet-mapping>
   	<servlet-name>SelectAllWishCon</servlet-name>
   	<url-pattern>/SelectAllWishCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectOneMedicineCon</servlet-name>
+  	<url-pattern>/SelectOneMedicineCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectByOneMedicineCon</servlet-name>
+  	<url-pattern>/SelectByOneMedicineCon</url-pattern>
   </servlet-mapping>
 
 </web-app>

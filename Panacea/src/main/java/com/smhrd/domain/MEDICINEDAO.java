@@ -1,5 +1,6 @@
 package com.smhrd.domain;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -70,6 +71,28 @@ public class MEDICINEDAO {
 		}
 		
 		return medicineList;
+	}
+	
+	// 약 정보 한개 불러오기
+	public int selectMedicineById(BigDecimal seq) {
+		int cnt = 0;
+		
+		try {
+			cnt = sqlSession.selectOne("selectMedicineById", seq);
+			
+			if (cnt > 0) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return cnt;
+		
 	}
 	
 	// 약 정보 삭제

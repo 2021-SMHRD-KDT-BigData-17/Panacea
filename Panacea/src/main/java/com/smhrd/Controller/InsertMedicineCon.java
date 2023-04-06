@@ -1,6 +1,8 @@
 package com.smhrd.Controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +17,11 @@ public class InsertMedicineCon extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		int seq = Integer.parseInt(request.getParameter("pill_seq"));
+		String seqStr = request.getParameter("pill_seq");
+		BigDecimal seq = null;
+		if (seqStr != null && seqStr.matches("\\d+")) {
+		    seq = new BigDecimal(seqStr);
+		}
 		String name = request.getParameter("pill_name");
 		String img = request.getParameter("pill_img");
 		String effect = request.getParameter("pill_effect");

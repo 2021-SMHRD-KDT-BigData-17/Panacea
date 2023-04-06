@@ -25,7 +25,7 @@
 		<div class="container flex-lg-column">
 			<a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp"> <span
 				class="h3 fw-bold d-block d-lg-none">동의보감</span> <img
-				src="./assets/images/pong.jpg"
+				src="./assets/images/logo.jpg"
 				class="d-none d-lg-block rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button"
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</nav>
-	
+
 	<!-- 처방약 상세정보 Form -->
 	<!-- SelectOneMedicineCon -->
 	<div id="content-wrapper">
@@ -74,23 +74,25 @@
 					<table>
 						<tr>
 							<td class="title-left"><span>제품명</span></td>
-							<td class="title-right"><span>약 이름</span></td>
+							<td class="title-right"><span>아스피린(Aspirin)</span></td>
 							<td rowspan="3" class="image"><img
-								src="assets/images/rupong.jpg"></td>
+								src="assets/images/aspirin.jpg"></td>
 						</tr>
 						<tr>
 							<td class="title-left"><span>제형</span></td>
-							<td class="title-right"><span>약 모양</span></td>
+							<td class="title-right"><span>작고 둥근 형태의 백색 혹은 노란색의
+									정제약</span></td>
 						</tr>
 						<tr>
 							<td class="title-left"><span>효능ㆍ효과</span></td>
-							<td class="title-right"><span>효능,효과 설명</span></td>
+							<td class="title-right"><span>해열제, 진통제, 항염증제, 혈전 예방제</span></td>
 						</tr>
 						<tr>
 							<td colspan="3" class="content-head"><span>▶ 용법ㆍ용량</span></td>
 						</tr>
 						<tr>
-							<td colspan="3" class="content-body"><span>용법,용량 내용</span></td>
+							<td colspan="3" class="content-body"><span>의사의 지시에 따라
+									복용. 일반적으로 성인의 경우 325mg 650mg을 하루 24회 복용</span></td>
 						</tr>
 						<tr>
 							<td colspan="3" class="content-head"><span>▶ 사용 상의
@@ -99,11 +101,9 @@
 						<tr>
 							<td colspan="3" class="content-body">
 								<ol>
-									<li>주의사항
-										<ol>
-											<li>상세설명</li>
-										</ol>
-									</li>
+									<li>복용 시 위장장애, 출혈 등의 부작용이 발생할 수 있으므로, 의사의 지시에 따라 적절한 용량과
+										기간을 지켜야 합니다. 특히 임신중인 여성, 소아, 청소년, 고령자, 혈액질환, 위장궤양 등의 환자는 주의가
+										필요합니다.</li>
 								</ol>
 							</td>
 						</tr>
@@ -114,67 +114,72 @@
 	</div>
 
 	<!-- Jsp 적용 -->
-	<%--     <div id="content-wrapper">
-    <form action="#">
-        <div class="pillInfo-wrap">
-            <div class="pillInfo-head">
-                <div class="search">
-                    <input type="text" id="searchInput" placeholder="제품명/약 문자">
-                    <button id="searchButton">검색</button>
-                </div>
-                <div class="list-wrap">
-                    <button class="list"><a href="pill.jsp">목록</a></button>
-                </div>
-            </div>
-            <div class="pillInfo-table">
-                <% 
-        			MEDICINEDAO dao = new MEDICINEDAO();
-        			List<TB_MEDICINE> medicineList = dao.selectAllMedicine();
-        			
-                	if (medicineList != null) {
-                    	for (TB_MEDICINE medicine : medicineList) { 
-                    %>
-                        <table>
-                            <tr>
-                                <td class="title-left"><span>제품명</span></td>
-                                <td class="title-right"><span><%= medicine.getPill_name() %></span></td>
-                                <td rowspan="3" class="image"><img src="<%= medicine.getPill_img() %>"></td>
-                            </tr>
-                            <tr>
-                                <td class="title-left"><span>제형</span></td>
-                                <td class="title-right"><span><%= medicine.getPill_shape() %></span></td>
-                            </tr>
-                            <tr>
-                                <td class="title-left"><span>효능ㆍ효과</span></td>
-                                <td class="title-right"><span><%= medicine.getPill_effect() %></span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="content-head"><span>▶ 용법ㆍ용량</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="content-body"><span><%= medicine.getPill_dosage() %></span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="content-head"><span>▶ 사용 상의 주의사항</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="content-body">
-                                    <ol>
-                                        <li>주의사항
-                                            <ol>
-                                                <li><%= medicine.getPill_side_effect() %></li>
-                                            </ol>
-                                        </li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </table>
-                    <% } %>
-                <% } %>
-            </div>
-        </div>
-    </form>
-</div> --%>
+<%-- 	<div id="content-wrapper">
+		<form action="SelectByOneMedicineCon" method="post">
+			<div class="pillInfo-wrap">
+				<div class="pillInfo-head">
+					<div class="search">
+						<input type="text" id="searchInput" placeholder="제품명/약 문자">
+						<button id="searchButton">검색</button>
+					</div>
+					<div class="list-wrap">
+						<button class="list">
+							<a href="pill.jsp">목록</a>
+						</button>
+					</div>
+				</div>
+				
+				<div class="pillInfo-table">
+					<%
+					MEDICINEDAO dao = new MEDICINEDAO();
+					TB_MEDICINE medicine = dao.selectAllMedicine();
+
+					if (medicine != null) {
+					%>
+					<table>
+						<tr>
+							<td class="title-left"><span>제품명</span></td>
+							<td class="title-right"><span><%=medicine.getPill_name()%></span></td>
+							<td rowspan="3" class="image"><img
+								src="<%=medicine.getPill_img()%>"></td>
+						</tr>
+						<tr>
+							<td class="title-left"><span>제형</span></td>
+							<td class="title-right"><span><%=medicine.getPill_shape()%></span></td>
+						</tr>
+						<tr>
+							<td class="title-left"><span>효능ㆍ효과</span></td>
+							<td class="title-right"><span><%=medicine.getPill_effect()%></span></td>
+						</tr>
+						<tr>
+							<td colspan="3" class="content-head"><span>▶ 용법ㆍ용량</span></td>
+						</tr>
+						<tr>
+							<td colspan="3" class="content-body"><span><%=medicine.getPill_dosage()%></span></td>
+						</tr>
+						<tr>
+							<td colspan="3" class="content-head"><span>▶ 사용 상의
+									주의사항</span></td>
+						</tr>
+						<tr>
+							<td colspan="3" class="content-body">
+								<ol>
+									<li>주의사항
+										<ol>
+											<li><%=medicine.getPill_side_effect()%></li>
+										</ol>
+									</li>
+								</ol>
+							</td>
+						</tr>
+					</table>
+					<%
+					}
+					%>
+				</div>
+			</div>
+		</form>
+	</div> --%>
 
 </body>
 </html>

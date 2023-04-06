@@ -25,7 +25,7 @@
 		<div class="container flex-lg-column">
 			<a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp"> <span
 				class="h3 fw-bold d-block d-lg-none">동의보감</span> <img
-				src="./assets/images/pong.jpg"
+				src="./assets/images/logo.jpg"
 				class="d-none d-lg-block rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button"
@@ -101,11 +101,11 @@
 				</div>
 				<div class="bookmark-body">
 					<!-- 사진을 클릭하면 해당 약의 상세정보 페이지(pillInfo.jsp)로 넘어가기 -->
-					<a href="pillInfo.jsp"><img src="assets/images/강아지7.jpg"></a>
-					<a href="pillInfo.jsp"><img src="assets/images/강아지6.jpg"></a>
-					<a href="pillInfo.jsp"><img src="assets/images/강아지4.jpg"></a>
-					<a href="pillInfo.jsp"><img src="assets/images/강아지3.jpg"></a>
-					<a href="pillInfo.jsp"><img src="assets/images/강아지2.jpg"></a>
+					<a href="pillInfo.jsp"><img src="assets/images/aspirin.jpg"></a>
+					<a href="pillInfo.jsp"><img src="assets/images/pill2.jpg"></a>
+					<a href="pillInfo.jsp"><img src="assets/images/pill3.jpg"></a>
+					<a href="pillInfo.jsp"><img src="assets/images/pill4.jpg"></a>
+					<a href="pillInfo.jsp"><img src="assets/images/pill5.jpg"></a>
 
 					<!-- Jsp 적용 Form -->
 					<%--                     <% 

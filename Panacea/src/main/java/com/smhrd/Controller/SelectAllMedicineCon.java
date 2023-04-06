@@ -1,6 +1,7 @@
 package com.smhrd.Controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -14,10 +15,16 @@ import com.smhrd.domain.TB_MEDICINE;
 public class SelectAllMedicineCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		System.out.println("[SelectAllMedicineCon]");
 
 		request.setCharacterEncoding("UTF-8");
 		
-		int seq = Integer.parseInt(request.getParameter("pill_seq"));
+		String seqStr = request.getParameter("pill_seq");
+		BigDecimal seq = null;
+		if (seqStr != null && seqStr.matches("\\d+")) {
+		    seq = new BigDecimal(seqStr);
+		}
 		String name = request.getParameter("pill_name");
 		String img = request.getParameter("pill_img");
 		String effect = request.getParameter("pill_effect");

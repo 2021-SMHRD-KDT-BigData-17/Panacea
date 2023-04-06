@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/aos.css">
 <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
-<link rel="stylesheet" href="./assets/css/1.css">
+<link rel="stylesheet" href="./assets/css/1.css">	
 <link rel="stylesheet" href="./assets/css/view.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
 		<div class="container flex-lg-column">
 			<a class="navbar-brand mx-lg-auto mb-lg-4" href="index.jsp"> <span
 				class="h3 fw-bold d-block d-lg-none">동의보감</span> <img
-				src="./assets/images/pong.jpg"
+				src="./assets/images/logo.jpg"
 				class="d-none d-lg-block rounded-circle" alt="">
 			</a>
 			<button class="navbar-toggler" type="button"
@@ -110,9 +110,9 @@
 							for (TB_COMMENT comment : commentList) {
 						%>
 					
-					<p><%=comment.getCmt_seq()%></p>
-					<p><%=comment.getCmt_content()%></p>
-					<p><%=comment.getUser_id()%></p>
+					<p align="left">댓글 번호 : <%=comment.getCmt_seq()%></p>
+					<p align="left">댓글 내용 : <%=comment.getCmt_content()%></p>
+					<p align="left">사용자 아이디 : <%=comment.getUser_id()%></p><hr>
 					<%
 					}
 					}

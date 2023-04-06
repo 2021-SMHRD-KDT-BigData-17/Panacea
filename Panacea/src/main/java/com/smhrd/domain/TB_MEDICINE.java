@@ -1,8 +1,10 @@
 package com.smhrd.domain;
 
+import java.math.BigDecimal;
+
 public class TB_MEDICINE {
 
-	private int pill_seq;
+	private BigDecimal pill_seq;
 	private String pill_name;
 	private String pill_img;
 	private String pill_effect;
@@ -10,7 +12,7 @@ public class TB_MEDICINE {
 	private String pill_dosage;
 	private String pill_side_effect;
 	
-	public TB_MEDICINE(int pill_seq, String pill_name, String pill_img, String pill_effect, String pill_shape,
+	public TB_MEDICINE(BigDecimal pill_seq, String pill_name, String pill_img, String pill_effect, String pill_shape,
 			String pill_dosage, String pill_side_effect) {
 		super();
 		this.pill_seq = pill_seq;
@@ -22,11 +24,16 @@ public class TB_MEDICINE {
 		this.pill_side_effect = pill_side_effect;
 	}
 
-	public int getPill_seq() {
+	public TB_MEDICINE(BigDecimal pill_seq) {
+		super();
+		this.pill_seq = pill_seq;
+	}
+
+	public BigDecimal getPill_seq() {
 		return pill_seq;
 	}
 
-	public void setPill_seq(int pill_seq) {
+	public void setPill_seq(BigDecimal pill_seq) {
 		this.pill_seq = pill_seq;
 	}
 
